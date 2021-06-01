@@ -17,9 +17,9 @@ class User < ApplicationRecord
   has_many :meetups_as_local, class_name: 'Meetup', foreign_key: 'local_id'
   has_many :meetups_as_tourist, class_name: 'Meetup', foreign_key: 'tourist_id'
 
-  validates :description, presence: true, length: { maximum: 500 }
-  validates :gender, presence: true, inclusion: { in: GENDER }
-  validates :location, presence: true
-  validates :birthdate, presence: true
-  validates :profile_type, presence: true, inclusion: { in: PROFILE_TYPE}
+  # validates :description, presence: true, length: { maximum: 500 }
+  # validates :gender, presence: true, inclusion: { in: GENDER }
+  # validates :location, presence: true
+  # validates :birthdate, presence: true
+  # validates :profile_type, presence: true, inclusion: { in: PROFILE_TYPE}
 end
