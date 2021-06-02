@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+.wrapper {
+  height: 100vh;
+  background:$peach-gradient;
+  color:white;
+}
+
+.wrapper-text {
+  text-align: center;
+  padding-top:120px;
+}
+
+.home-title {
+  padding-top:30px;
+}
