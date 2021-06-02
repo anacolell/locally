@@ -1,6 +1,7 @@
 class User < ApplicationRecord
-  GENDER = %w[male female non-binary]
-  PROFILE_TYPE = %w[individual couple family]
+  GENDER = %w[Male Female Non-binary]
+  PROFILE_TYPE = %w[Individual Couple Family]
+  LANGUAGES = %w[Spanish English German Greek French]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
