@@ -1,35 +1,30 @@
 <div style="background-color: #FDF7F3">
   <div class="mt-4 mb-4 pt-5">
     <div align="center">
-      <h1 class="text">Where are you headed <b>next?</b></h1>
+      <h2 class="text">Where are you headed <b>next?</b></h2>
     </div>
   </div>
-
-  <div class="mb-4 pt-5 pb-1">
+  <div class="mb-4 pb-1">
     <div align="center">
       <p class="text">What's the destination?</p>
     </div>
   </div>
-
     <div class="mb-2 pt-1 pb-2">
       <div align="center">
         <div class="search">
           <%= form_tag users_path, method: 'get' do %>
           <%= text_field_tag :query, '', id: 'search' %>
-
         </div>
-
         <div class="fly-btn">
-          <div class="mb-4 pt-5 pb-2 w-100">
+          <div class="pt-5 pb-2">
             <div align="center">
               <%= submit_tag "Let's go!", name: 'go', id: 'green-btn' %>
             </div>
           </div>
         </div>
-
         <div class="adv-btn">
           <div class="mb-4 pt-2 pb-2">
-            <div align="center"><%= submit_tag 'Feeling adventurous?', name: 'adventurous', id: 'btn-adv' %></div>
+            <div align="center"><%= submit_tag "I'm feeling adventurous!", name: 'adventurous', id: 'btn-adv' %></div>
           </div>
         </div>
       <% end %>
