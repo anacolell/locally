@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/search', to: 'pages#search'
   resources :users, only: [:show, :index]
   resources :profiles, only: [:index, :show, :edit, :update]
-  resources :user_interests, only: [:new, :create, :index, :show]
+  resources :user_interests, only: [:new, :create, :index, :show, :destroy]
   # resources :recommendations, only: [:new, :create, :index, :destroy] do
   #   resources :bookmarks, only: [:new, :create, :destroy, :index]
   #   resources :reviews, only: [:new, :create, :show, :edit, :update]

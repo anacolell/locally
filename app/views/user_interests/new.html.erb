@@ -1,19 +1,12 @@
-<!-- <div>
-  <%# @interests.each do |interest| %>
-   <p><%#= link_to interest.name, user_interests_path(interest: interest.id), method: :post %></p>
-  <%# end %>
-</div> -->
-
-<div>
+<div class="container">
   <% @categories.each do |category| %>
     <p><%= category.name %></p>
   <% category.interests.each do |interest| %>
-    <div class="interest-tag"><%= link_to interest.name, user_interests_path(interest: interest.id), class: "interest-link", method: :post %></div>
+      <% if @user.interests.include?(interest) %>
+    <div class="active-tag"><%= link_to interest.name, user_interest_path(interest), class: "interest-link", method: :delete %></div>
+    <% else %>
+      <div class="interest-tag"><%= link_to interest.name, user_interests_path(interest: interest.id), class: "interest-link", method: :post %></div>
+    <% end %>
   <% end %>
   <% end %>
 </div>
-
-<% @user.interests.each do |interest| %>
-<%= interest.name %>
-<% end %>
-<%#= current_user.interest_ids.include?(interest.id) ? 'active-tag' : '' %>">

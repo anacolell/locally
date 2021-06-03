@@ -1,4 +1,21 @@
 .interest-tag {
+  background-color: white;
+  border: 2px solid $peach;
+  border-radius: 35px;
+  padding: 0px 14px;
+  font-size: 16px;
+  color: white;
+  display: inline-block;
+  margin: 0px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  .interest-link {
+    padding-right: 5px;
+    color:$peach;
+  }
+}
+
+.active-tag {
   background-color: $peach;
   border: 2px solid $peach;
   border-radius: 35px;
@@ -13,8 +30,4 @@
     padding-right: 5px;
     color:white;
   }
-}
-
-.active-tag {
-  background-color: white;
 }

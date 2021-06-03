@@ -16,8 +16,11 @@ class UserInterestsController < ApplicationController
   end
 
   def destroy
-    interest = Interest.find(params[:interest].to_i)
-    interest.destroy
+    authorize current_user
+    interest = Interest.find(params[:id])
+    current_user.interests.destroy(interest)
+    # user_interest = UserInterest.where(interest_id: interest, user_id: current_user).destroy
+    # user_interest.destroy
     redirect_to new_user_interest_path
   end
 end
