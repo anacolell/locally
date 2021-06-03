@@ -1,13 +1,69 @@
 <div class="container">
 <h1>Find a <strong>local</strong></h1>
-  <% local_array = @locals.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
-  <% local_array. each do |local| %>
-    <div class="local-card">
-      <%= "#{local.username}, #{local.age}" %>
-      <%= local.location %>
-      <hr>
-      <p>Let's meet for:</p>
-      <%= "#{local.instance_variable_get("@ranking")}%" %>
-    </div>
+  <% if params[:query] == 'go' %>
+    <% local_array = @locals.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
+    <% local_array. each do |local| %>
+      <div class="local-card">
+        <div class="row">
+          <div class="col-2">
+            <div class="profile-photo">
+              <% if local.photo.attached? %>
+                <%= cl_image_tag local.photo.key, height: 50, width: 50, crop: :fill %>
+              <% else %>
+                <%= image_tag('user.png', height: 50, width: 50, crop: :fill) %>
+            <% end %>
+            </div>
+          </div>
+          <div class="col-6">
+            <%= "#{local.username}, #{local.age}" %>
+            <%= local.location %>
+            <hr>
+            <p>Let's meet for:</p>
+            <% local.interests.each do |interest| %>
+              <%= interest.name %>
+            <% end %>
+          </div>
+          <div class="col-4">
+            <div id="profile-button">
+              <%= link_to "Go to profile", users_path, class: 'profile-link' %>
+            </div>
+            <div id="match-button">
+              <%= "#{local.instance_variable_get("@ranking")}%" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+      <div class="local-card">
+        <div class="row">
+          <div class="col-2">
+            <div class="profile-photo">
+              <% if @random_local.photo.attached? %>
+                <%= cl_image_tag @random_local.photo.key, height: 50, width: 50, crop: :fill %>
+              <% else %>
+                <%= image_tag('user.png', height: 50, width: 50, crop: :fill) %>
+            <% end %>
+            </div>
+          </div>
+          <div class="col-6">
+            <%= "#{@random_local.username}, #{@random_local.age}" %>
+            <%= @random_local.location %>
+            <hr>
+            <p>Let's meet for:</p>
+            <% @random_local.interests.each do |interest| %>
+              <%= interest.name %>
+            <% end %>
+          </div>
+          <div class="col-4">
+            <div id="profile-button">
+              <%= link_to "Go to profile", users_path, class: 'profile-link' %>
+            </div>
+            <div id="match-button">
+              <%= "#{@random_local.instance_variable_get("@ranking")}%" %>
+            </div>
+          </div>
+        </div>
+      </div>
   <% end %>
 </div>

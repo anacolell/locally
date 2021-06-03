@@ -1,2 +1,38 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.local-card {
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+#profile-button {
+  background: $lightpeach;
+  padding: 8px 24px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+
+  &:hover {
+  background: $peach;
+  }
+}
+
+.profile-link {
+  color: white;
+
+  &:hover {
+  text-decoration: none;
+  color: white;
+  }
+}
+
+#match-button {
+  background: $green;
+  padding: 8px 24px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+}
