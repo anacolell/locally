@@ -2,7 +2,8 @@
 @import "home";
 
 h1 {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  font-size: 36px;
 }
 
 .header-flex {
@@ -12,7 +13,12 @@ h1 {
 
 #percentage-description{
   font-size: 10px;
-  margin-top: 6px;
+  margin-top: 0px;
+  background: rgba(245, 178, 146, 0.3);
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(220, 220, 220, 0.8);
 }
 
 .locals-interests {
