@@ -1,4 +1,6 @@
 <h1>Hello</h1>
-<% @users.each do |user| %>
-  <%= user.username %>
+<% local_array = @locals.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
+<% local_array. each do |local| %>
+    <%= local.username %>
+    <%= local.instance_variable_get("@ranking") %>
 <% end %>
