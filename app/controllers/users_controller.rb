@@ -9,15 +9,18 @@ class UsersController < ApplicationController
     # @rating = calculate_similarity_ranking
     # authorize @users
 
-    if params[:query] == 'users.go'
-      @users = User.where("location ILIKE ?", "%#{params[:query]}%")
-      @locals.each do |local|
+    if params[:commit] == "Let's go!"
+      @locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
+      @locals_location.each do |local|
         @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
         local.instance_variable_set("@ranking", @matching_number)
       end
 
     else
-      @random_local = @locals.order("RANDOM()").first
+      @random_locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
+      @random_local = @random_locals_location.sample
+      @matching_number = (calculate_similarity_ranking(@random_local) * 100).round(0)
+      # @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
       @random_local.instance_variable_set("@ranking", @matching_number)
       # which params are there when user clicks adventurous option?
       # @users = User.where("location ILIKE ?", "%#{params[:query]}%")
