@@ -1,10 +1,10 @@
-<div style="background-color: #FDF7F3">
+<div class="search-wrapper">
   <div class="mt-4 mb-4 pt-5">
     <div align="center">
       <h2 class="text">Where are you headed <b>next?</b></h2>
     </div>
   </div>
-  <div class="mb-4 pb-1">
+  <div class=" pb-1">
     <div align="center">
       <p class="text">What's the destination?</p>
     </div>
@@ -18,19 +18,17 @@
         <div class="fly-btn">
           <div class="pt-5 pb-2">
             <div align="center">
-              <%= submit_tag "Let's go!", name: 'go', id: 'green-btn' %>
+              <%= submit_tag "Let's go!", :go => "go", id: 'green-btn' %>
             </div>
           </div>
         </div>
         <div class="adv-btn">
           <div class="mb-4 pt-2 pb-2">
-            <div align="center"><%= submit_tag "I'm feeling adventurous!", name: 'adventurous', id: 'btn-adv' %></div>
+            <div align="center">
+              <%= submit_tag "I'm feeling adventurous!", :adventurous => "adventurous", id: 'btn-adv' %>
           </div>
         </div>
       <% end %>
       </div>
     </div>
 </div>
-
-
-

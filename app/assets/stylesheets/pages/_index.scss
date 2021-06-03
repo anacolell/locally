@@ -1,2 +1,77 @@
 // Import page-specific CSS files here.
 @import "home";
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 36px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+#percentage-description{
+  font-size: 10px;
+  margin-top: 0px;
+  background: rgba(245, 178, 146, 0.3);
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(220, 220, 220, 0.8);
+}
+
+.locals-interests {
+  font-size: 14px;
+}
+
+.col-5 {
+  justify-content: center;
+}
+
+.local-card {
+  margin-top: 16px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  box-shadow: 2px 2px 4px rgba(220, 220, 220, 0.8);
+}
+
+#profile-button {
+  background: $lightpeach;
+  padding: 8px 8px;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+
+  &:hover {
+  background: $peach;
+  }
+}
+
+.profile-link {
+  color: white;
+
+  &:hover {
+  text-decoration: none;
+  color: white;
+  }
+}
+
+#match-button {
+  background: $green;
+  padding: 8px 24px;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  bottom: 8px;
+}
