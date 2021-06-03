@@ -9,20 +9,28 @@ class UsersController < ApplicationController
     # @rating = calculate_similarity_ranking
     # authorize @users
 
-    if params[:query].present?
-      # @users = User.where("location ILIKE ?", "%#{params[:query]}%")
-      # @users.sort_by(&:calculate_similarity_ranking)
+    if params[:commit] == "Let's go!"
+      @locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
+      @locals_location.each do |local|
+        @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
+        local.instance_variable_set("@ranking", @matching_number)
+      end
 
     else
+      @random_locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
+      @random_local = @random_locals_location.sample
+      @matching_number = (calculate_similarity_ranking(@random_local) * 100).round(0)
+      # @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
+      @random_local.instance_variable_set("@ranking", @matching_number)
       # which params are there when user clicks adventurous option?
       # @users = User.where("location ILIKE ?", "%#{params[:query]}%")
       # @users = User.all
       # @users.sort_by(&:calculate_similarity_ranking)
-      @locals.each do |local|
-        # count_matching_interests(local)
-        @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
-        local.instance_variable_set("@ranking", @matching_number)
-      end
+      # @locals.each do |local|
+      #   # count_matching_interests(local)
+      #   @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
+      #   local.instance_variable_set("@ranking", @matching_number)
+      # end
       # @users = User.all
     end
   end
@@ -64,6 +72,7 @@ class UsersController < ApplicationController
     matching
   end
 
+
   private
 
   def set_locals
@@ -75,6 +84,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :address, :found_on, :species)
+    params.require(:user).permit(:username, :photo, :location, :age)
   end
 end

@@ -18,19 +18,17 @@
         <div class="fly-btn">
           <div class="pt-5 pb-2">
             <div align="center">
-              <%= submit_tag "Let's go!", name: 'go', id: 'green-btn' %>
+              <%= submit_tag "Let's go!", :go => "go", id: 'green-btn' %>
             </div>
           </div>
         </div>
         <div class="adv-btn">
           <div class="mb-4 pt-2 pb-2">
-            <div align="center"><%= submit_tag "I'm feeling adventurous!", name: 'adventurous', id: 'btn-adv' %></div>
+            <div align="center">
+              <%= submit_tag "I'm feeling adventurous!", :adventurous => "adventurous", id: 'btn-adv' %>
           </div>
         </div>
       <% end %>
       </div>
     </div>
 </div>
-
-
-
