@@ -1,19 +1,27 @@
-<div class="container">
-  <h1>My profile show</h1>
-   <% if @user.photo.attached? %>
-    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
-    <% else %>
-    <%= image_tag('user.png', height: 300, width: 400, crop: :fill) %>
-  <% end %>
-  <div>
-  <h4><%= @user.first_name %></h4>
-  <h4><%= @user.gender %></h4>
-  <h4><%= @user.location %></h4>
-  <h4><%= @user.description %></h4>
-    <% if @user.languages %>
-    <%= @user.languages.each do |language| %>
-     <%= language %>
-    <% end %>
-    <% end %>
+<div class="show-profile-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-4">
+        <div class="form-show-profile">
+          <h1 class="text-center">My profile</h1>
+           <% if @user.photo.attached? %>
+            <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class:"foto-profile" %>
+            <% else %>
+            <%= image_tag('user.png', height: 200, width: 200, crop: :fill, class:"foto-profile") %>
+            <% end %>
+            <div>
+              <h4><%= @user.first_name %></h4>
+              <h4><%= @user.gender %></h4>
+              <h4><%= @user.location %></h4>
+              <h4><%= @user.description %></h4>
+              <% if @user.languages %>
+                <%= @user.languages.each do |language| %>
+                 <%= language %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
