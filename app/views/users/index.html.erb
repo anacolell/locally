@@ -1,6 +1,13 @@
-<h1>Hello</h1>
-<% local_array = @locals.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
-<% local_array. each do |local| %>
-    <%= local.username %>
-    <%= local.instance_variable_get("@ranking") %>
-<% end %>
+<div class="container">
+<h1>Find a <strong>local</strong></h1>
+  <% local_array = @locals.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
+  <% local_array. each do |local| %>
+    <div class="local-card">
+      <%= "#{local.username}, #{local.age}" %>
+      <%= local.location %>
+      <hr>
+      <p>Let's meet for:</p>
+      <%= "#{local.instance_variable_get("@ranking")}%" %>
+    </div>
+  <% end %>
+</div>
