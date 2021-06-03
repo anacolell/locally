@@ -24,4 +24,8 @@ class UserPolicy < ApplicationPolicy
   def create?
     user.id == record.id
   end
+
+  def destroy?
+    user.id == record.id
+  end
 end

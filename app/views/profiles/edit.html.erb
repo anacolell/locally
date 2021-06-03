@@ -1,28 +1,36 @@
-<div class="container">
-  <h1>Your profile</h1>
-  <% if @user.photo.attached? %>
-    <%= cl_image_tag @user.photo.key, height: 300, width: 400, crop: :fill %>
-    <% else %>
-      <%= image_tag('user.png', height: 300, width: 400, crop: :fill) %>
-  <% end %>
-  <%= simple_form_for current_user, url:profile_path do |f| %>
-    <%= f.input :photo, as: :file %>
-    <%= f.error_notification %>
-    <%= f.input :first_name, placeholder: 'First name' %>
-    <%= f.input :last_name, placeholder: 'Last name' %>
-    <%= f.input :gender, collection: User::GENDER %>
-    <%= f.input :location %>
-    <%#= f.select :languages %>
-    <%= f.input :languages, as: :select, collection: User::LANGUAGES, input_html: { class: "select2", multiple: true, style: "width: 100%" } %>
-    <%= f.input :birthdate,
-                as: :date,
-                start_year: Date.today.year - 18,
-                end_year: Date.today.year - 99,
-                order: [:day, :month, :year] %>
-    <%= f.input :description, as: :text, placeholder: 'Tell us a little bit about yourself!' %>
-    <%#= f.input :photo_cache, as: :hidden %>
-    <%= f.button :submit, 'Update profile' %>
-  <% end %>
+<div class="edit-profile-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <div class="form-edit-profile">
+           <h1 class="text-center">Your profile</h1>
+            <% if @user.photo.attached? %>
+              <%= cl_image_tag @user.photo.key, height: 100, width: 100, crop: :fill, class:"foto-edit-profile" %>
+              <% else %>
+                <%= image_tag('user.png', height: 100, width: 100, crop: :fill, class:"foto-edit-profile") %>
+              <% end %>
+              <%= simple_form_for current_user, url:profile_path do |f| %>
+              <%= f.input :photo, as: :file, label:false %>
+              <%= f.error_notification %>
+              <%= f.input :first_name, placeholder: 'First name' %>
+              <%= f.input :last_name, placeholder: 'Last name' %>
+              <%= f.input :gender, collection: User::GENDER %>
+              <%= f.input :location %>
+              <%#= f.select :languages %>
+              <%= f.input :languages, as: :select, collection: User::LANGUAGES, input_html: { class: "select2", multiple: true, style: "width: 100%" } %>
+              <%= f.input :birthdate,
+                          as: :date,
+                          start_year: Date.today.year - 18,
+                          end_year: Date.today.year - 99,
+                          order: [:day, :month, :year] %>
+              <%= f.input :description, as: :text, placeholder: 'Tell us a little bit about yourself!' %>
+              <%#= f.input :photo_cache, as: :hidden %>
+              <%= f.button :submit, 'Update profile', class:"btn btn-warning" %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!--     change_column :users, :languages, :text, array: true, default: [] -->
