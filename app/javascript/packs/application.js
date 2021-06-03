@@ -7,13 +7,15 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
+require("select2")
 
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initSelect2 } from '../plugins/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
+  initSelect2();
 })
 
 
