@@ -16,7 +16,7 @@
 # interests.create(name: 'Food')
 
 Interest.destroy_all
-# UserInterest.destroy_all
+UserInterest.destroy_all
 InterestCategory.destroy_all
 User.destroy_all
 
@@ -31,25 +31,25 @@ coffee = Interest.create!(name: 'Coffee', interest_category: food)
 
 a = User.create!(username: 'ana', email: 'amail2@test.com', password: '123456')
 UserInterest.create!(user: a, interest: tennis)
-# UserInterest.create!(user: a, interest: volleyball)
-# UserInterest.create!(user: a, interest: swimming)
-# UserInterest.create!(user: a, interest: badminton)
+UserInterest.create!(user: a, interest: volleyball)
+UserInterest.create!(user: a, interest: swimming)
+UserInterest.create!(user: a, interest: badminton)
 
 b = User.create!(username: 'britta', email: 'bmail@test.com', password: '123456')
 UserInterest.create!(user: b, interest: tennis)
 UserInterest.create!(user: b, interest: coffee)
-# UserInterest.create!(user: b, interest: restaurants)
-# UserInterest.create!(user: b, interest: badminton)
+UserInterest.create!(user: b, interest: restaurants)
+UserInterest.create!(user: b, interest: badminton)
 
-# c = User.new(username: 'cris', email: 'cmail@test.com', password: '123456')
-# UserInterest.create!(user: c, interest: restaurants)
-# UserInterest.create!(user: c, interest: coffee)
+c = User.create!(username: 'cris', email: 'cmail@test.com', password: '123456')
+UserInterest.create!(user: c, interest: restaurants)
+UserInterest.create!(user: c, interest: coffee)
 
-# d = User.new(username: 'dan', email: 'dmail@test.com', password: '123456')
-# UserInterest.create!(user: d, interest: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: swimming)
-# UserInterest.create!(user: d, interest: badminton)
+d = User.create!(username: 'dan', email: 'dmail@test.com', password: '123456')
+UserInterest.create!(user: d, interest: tennis)
+UserInterest.create!(user: d, interest: volleyball)
+UserInterest.create!(user: d, interest: coffee)
+UserInterest.create!(user: d, interest: badminton)
 
 
 
