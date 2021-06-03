@@ -16,4 +16,12 @@ class UserPolicy < ApplicationPolicy
   def update?
     user.id == record.id
   end
+
+  def new?
+    user.id == record.id
+  end
+
+  def create?
+    user.id == record.id
+  end
 end
