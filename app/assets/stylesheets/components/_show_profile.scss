@@ -1,0 +1,66 @@
+.show-profile-wrapper {
+  height:100vh;
+  background:$peach-gradient;
+}
+
+.form-show-profile {
+  background:white;
+  padding:10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  position:relative;
+  h2 {
+    font-size: 22px;
+    font-weight:bold;
+    margin-top: 20px;
+    margin-bottom:30px;
+    text-align:center;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.profile-green-btn {
+  background-color: #A4C097;
+  color: white;
+  text-decoration: none;
+  border-style: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  position:absolute;
+  top:10px;
+  right:10px;
+  opacity:0.7;
+  transition: all 0.5s;
+}
+
+.profile-green-btn:hover {
+  color:white;
+  text-decoration:none;
+  opacity:1;
+}
+
+.profile-interest-btn {
+  background-color: white;
+  color: #A4C097;
+  border: 1px solid black;
+  text-decoration: none;
+  border-style: none;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  position:absolute;
+  top:50px;
+  right:10px;
+  opacity:0.7;
+  transition: all 0.5s;
+}
+
+.profile-interest-btn:hover {
+  color:white;
+  text-decoration:none;
+}
