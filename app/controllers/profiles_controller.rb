@@ -25,6 +25,6 @@ class ProfilesController < ApplicationController
   private
 
   def user_strong_params
-    params.require(:user).permit(:first_name, :last_name, :gender, :birthdate, :location, :description, :photo, :languages => [])
+    params.require(:user).permit(:first_name, :last_name, :gender, :birthdate, :location, :city, :country, :description, :photo, :languages => [])
   end
 end
