@@ -27,8 +27,11 @@
             <p><%= local.location %></p>
             <hr>
             <p>Let's meet for:</p>
-            <% local.interests.each do |interest| %>
+            <% local.interests.each_with_index do |interest, index| %>
               <%= "#{interest.name}, "%>
+              <% if index == local.interests.size - 1 %>
+                <%= "#{interest.name}"%>
+              <% end %>
             <% end %>
           </div>
           <div class="d-flex col-4 justify-content-center">
@@ -59,8 +62,11 @@
             <p><%= @random_local.location %></p>
             <hr>
             <p>Let's meet for:</p>
-            <% @random_local.interests.each do |interest| %>
-              <div class="locals-interests"><%= interest.name %></div>
+            <% @random_local.interests.each_with_index do |interest, index| %>
+              <%= "#{interest.name}, "%>
+              <% if index == @random_local.interests.size - 1 %>
+                <%= "#{interest.name}"%>
+              <% end %>
             <% end %>
           </div>
           <div class="d-flex col-4 justify-content-center">
