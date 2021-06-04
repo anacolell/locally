@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 # devise gem
 gem 'devise'
-
+gem 'faker'
 # pundit
 gem 'pundit'
 
