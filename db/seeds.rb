@@ -15,41 +15,41 @@
 # interests.create(name: 'Badminton')
 # interests.create(name: 'Food')
 
-# Interest.destroy_all
-# UserInterest.destroy_all
-# InterestCategory.destroy_all
-# User.destroy_all
+Interest.destroy_all
+UserInterest.destroy_all
+InterestCategory.destroy_all
+User.destroy_all
 
-# sports = InterestCategory.create!(name: 'Sports')
-# food = InterestCategory.create!(name: 'Food')
-# tennis = Interest.create!(name: 'Tennis', interest_category: sports)
-# volleyball = Interest.create!(name: 'Volleyball', interest_category: sports)
-# swimming = Interest.create!(name: 'Swimming', interest_category: sports)
-# badminton = Interest.create!(name: 'Badminton', interest_category: sports)
-# restaurants = Interest.create!(name: 'Restaurants', interest_category: food)
-# coffee = Interest.create!(name: 'Coffee', interest_category: food)
+sports = InterestCategory.create!(name: 'Sports')
+food = InterestCategory.create!(name: 'Food')
+tennis = Interest.create!(name: 'Tennis', interest_category: sports)
+volleyball = Interest.create!(name: 'Volleyball', interest_category: sports)
+swimming = Interest.create!(name: 'Swimming', interest_category: sports)
+badminton = Interest.create!(name: 'Badminton', interest_category: sports)
+restaurants = Interest.create!(name: 'Restaurants', interest_category: food)
+coffee = Interest.create!(name: 'Coffee', interest_category: food)
 
-# a = User.create!(username: 'ana', email: 'amail2@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: a, interest: tennis)
-# UserInterest.create!(user: a, interest: volleyball)
-# UserInterest.create!(user: a, interest: swimming)
-# UserInterest.create!(user: a, interest: badminton)
+a = User.create!(username: 'ana', email: 'amail2@test.com', password: '123456', location: "Stockholm")
+UserInterest.create!(user: a, interest: tennis)
+UserInterest.create!(user: a, interest: volleyball)
+UserInterest.create!(user: a, interest: swimming)
+UserInterest.create!(user: a, interest: badminton)
 
-# b = User.create!(username: 'britta', email: 'bmail@test.com', password: '123456', location: "London")
-# UserInterest.create!(user: b, interest: tennis)
-# UserInterest.create!(user: b, interest: coffee)
-# UserInterest.create!(user: b, interest: restaurants)
-# UserInterest.create!(user: b, interest: badminton)
+b = User.create!(username: 'britta', email: 'bmail@test.com', password: '123456', location: "London")
+UserInterest.create!(user: b, interest: tennis)
+UserInterest.create!(user: b, interest: coffee)
+UserInterest.create!(user: b, interest: restaurants)
+UserInterest.create!(user: b, interest: badminton)
 
-# c = User.create!(username: 'cris', email: 'cmail@test.com', password: '123456', location: "Berlin")
-# UserInterest.create!(user: c, interest: restaurants)
-# UserInterest.create!(user: c, interest: coffee)
+c = User.create!(username: 'cris', email: 'cmail@test.com', password: '123456', location: "Berlin")
+UserInterest.create!(user: c, interest: restaurants)
+UserInterest.create!(user: c, interest: coffee)
 
-# d = User.create!(username: 'dan', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: coffee)
-# UserInterest.create!(user: d, interest: badminton)
+d = User.create!(username: 'dan', email: 'dmail@test.com', password: '123456', location: "Stockholm")
+UserInterest.create!(user: d, interest: tennis)
+UserInterest.create!(user: d, interest: volleyball)
+UserInterest.create!(user: d, interest: coffee)
+UserInterest.create!(user: d, interest: badminton)
 
 
 category = InterestCategory.create(name: "Going Out")
