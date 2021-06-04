@@ -10,18 +10,24 @@
             <% else %>
             <%= image_tag('user.png', height: 200, width: 200, crop: :fill, class:"foto-profile") %>
             <% end %>
-            <h4>A local in <i class="fas fa-map-pin"></i> <%= @user.city %>, <%= @user.country %></h4>
-          </div>
             <div>
-              <p><%= @user.first_name %></p>
-              <p><%= @user.gender %></p>
+              <h4 class="mt-4 username-profile"><%= @user.first_name %> <%= @user.last_name %>, <%= @user.age %></h4>
+              <h5 class="mb-4">A local in <i class="fas fa-map-pin"></i> <%= @user.city %>, <%= @user.country %></h5>
               <p><%= @user.description %></p>
+            </div>
+            </div>
+<!--               <p><%= @user.gender %></p> -->
+              <h5 class="my-4 profile-subtitle">Contact me in:</h5>
               <% if @user.languages %>
                 <% @user.languages.each do |language| %>
-                 <%= language %>
+                  <% if language == @user.languages.last  %>
+                   & <%= language %>
+                  <% else  %>
+                   <%= language %>
+                  <% end %>
               <% end %>
             <% end %>
-            <h4 class="my-4">My interests</h4>
+            <h5 class="my-4 profile-subtitle">My interests</h5>
             <% unless @user.interests.empty? %>
               <% @user.interests.each do |interest| %>
                 <div class="active-tag"><%= interest.name %></div>
@@ -29,7 +35,6 @@
             <% else %>
               <p>You haven't added any interests yet!<p>
             <% end %>
-          </div>
           <div class="show-buttons">
             <%= link_to "Edit profile", edit_profile_path, class:'profile-green-btn' %>
             <%= link_to "Add interests", new_user_interest_path, class:'profile-interest-btn' %>

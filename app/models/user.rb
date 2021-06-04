@@ -20,6 +20,10 @@ class User < ApplicationRecord
   has_many :meetups_as_tourist, class_name: 'Meetup', foreign_key: 'tourist_id'
   has_one_attached :photo
 
+  def age
+    age = (Time.now.to_s(:number).to_i - self.birthdate.to_time.to_s(:number).to_i) / 10e9.to_i
+    self.age = age
+  end
   # validates :description, presence: true, length: { maximum: 500 }
   # validates :gender, presence: true, inclusion: { in: GENDER }
   # validates :location, presence: true
