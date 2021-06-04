@@ -15,7 +15,8 @@
               <%= f.input :first_name, placeholder: 'First name' %>
               <%= f.input :last_name, placeholder: 'Last name' %>
               <%= f.input :gender, collection: User::GENDER %>
-              <%= f.input :location %>
+              <%= f.input :city %>
+              <%= f.input :country, as: :select, collection: User::COUNTRIES, input_html: { class: "select2", style: "width: 100%" } %>
               <%#= f.select :languages %>
               <%= f.input :languages, as: :select, collection: User::LANGUAGES, input_html: { class: "select2", multiple: true, style: "width: 100%" } %>
               <%= f.input :birthdate,
