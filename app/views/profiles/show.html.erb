@@ -3,8 +3,6 @@
     <div class="row justify-content-center">
       <div class="col-xs-12 col-sm-10 col-sm-offset-4">
         <div class="form-show-profile">
-          <%= link_to "Edit profile", edit_profile_path, class:'profile-green-btn' %>
-          <%= link_to "Add interests", new_user_interest_path, class:'profile-interest-btn' %>
           <h1 class="text-center">My profile</h1>
            <% if @user.photo.attached? %>
             <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class:"foto-profile" %>
@@ -12,12 +10,12 @@
             <%= image_tag('user.png', height: 200, width: 200, crop: :fill, class:"foto-profile") %>
             <% end %>
             <div>
-              <h4><%= @user.first_name %></h4>
-              <h4><%= @user.gender %></h4>
-              <h4><%= @user.location %></h4>
-              <h4><%= @user.description %></h4>
+              <p><%= @user.first_name %></p>
+              <p><%= @user.gender %></p>
+              <p><%= @user.location %></p>
+              <p><%= @user.description %></p>
               <% if @user.languages %>
-                <%= @user.languages.each do |language| %>
+                <% @user.languages.each do |language| %>
                  <%= language %>
               <% end %>
             <% end %>
@@ -29,6 +27,10 @@
             <% else %>
               <p>You haven't added any interests yet!<p>
             <% end %>
+          </div>
+          <div class="show-buttons">
+            <%= link_to "Edit profile", edit_profile_path, class:'profile-green-btn' %>
+            <%= link_to "Add interests", new_user_interest_path, class:'profile-interest-btn' %>
           </div>
         </div>
       </div>
