@@ -12,14 +12,15 @@
               <% end %>
               <%= category.name %>
             <h4>
-          <% category.interests.each do |interest| %>
+            <% category.interests.each do |interest| %>
               <% if @user.interests.include?(interest) %>
-            <div class="active-tag"><%= link_to interest.name, user_interest_path(interest), class: "interest-link", method: :delete %></div>
-            <% else %>
-              <div class="interest-tag"><%= link_to interest.name, user_interests_path(interest: interest.id), class: "interest-link", method: :post %></div>
+                <div class="active-tag"><%= link_to interest.name, user_interest_path(interest), class: "interest-link", method: :delete %></div>
+              <% else %>
+                <div class="interest-tag"><%= link_to interest.name, user_interests_path(interest: interest.id), class: "interest-link", method: :post %></div>
+              <% end %>
             <% end %>
           <% end %>
-          <% end %>
+          <div class="interests-btn"><%= link_to "Save interests", profile_path(current_user.id), class:'interests-green-btn' %></div>
         </div>
       </div>
     </div>
