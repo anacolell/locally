@@ -11,7 +11,15 @@
   cursor: pointer;
   .interest-link {
     padding-right: 5px;
+    text-decoration:none;
     color:$peach;
+  }
+}
+
+.interest-tag:hover {
+  background-color: $peach;
+  .interest-link {
+    color:white;
   }
 }
 
@@ -29,5 +37,31 @@
   .interest-link {
     padding-right: 5px;
     color:white;
+    text-decoration:none;
   }
 }
+
+.interests-wrapper {
+  height:100%;
+  background:$peach-gradient;
+}
+
+.form-interests {
+  background:white;
+  padding:10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  h2 {
+    font-size: 22px;
+    font-weight:bold;
+    margin-top: 20px;
+    margin-bottom:30px;
+    text-align:center;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
