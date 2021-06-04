@@ -7,14 +7,14 @@
 
 .wrapper-text {
   text-align: center;
-  padding-top:120px;
+  padding-top:30px;
 }
 
 
 .signup-button {
   text-decoration: none;
   color: white;
-  font-size: 22px;
+  font-size: 14px;
   box-shadow: 2px;
 
  &:hover {
@@ -34,9 +34,31 @@
 
 .home-title {
   color: black;
+  font-size: 28px;
 }
 
 #text-2 {
   color: black;
 
 }
+
+.desc {
+  color: white;
+  text-shadow: 2px 2px 8px black;
+}
+
+.desc1 {
+  color: white;
+  text-shadow: 2px 2px 8px black;
+}
+
+.desc2 {
+  color: white;
+  text-shadow: 2px 2px 8px black;
+}
+
+
+.wrapper-sign {
+  background:$peach-gradient;
+}
+
