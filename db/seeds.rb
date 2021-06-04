@@ -237,7 +237,6 @@ UserInterest.create!(user: b, interest: coffee)
 UserInterest.create!(user: b, interest: pubs)
 UserInterest.create!(user: b, interest: dancing)
 UserInterest.create!(user: b, interest: gym)
-UserInterest.create!(user: b, interest: soccer)
 UserInterest.create!(user: b, interest: electronic)
 UserInterest.create!(user: b, interest: alternative)
 
