@@ -10,8 +10,33 @@
   padding-top:120px;
 }
 
-.home-title {
-  padding-top: 30px;
-  padding-bottom: 30px;
+
+.signup-button {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  box-shadow: 2px;
+
+ &:hover {
+    color: #9EB4D3;
+    text-decoration: none;
+  }
 }
 
+
+#text-highlighted {
+  background-color: #d8ae99;
+  color: white;
+  padding: 0px 4px;
+  margin-right: 4px;
+  border-radius: 2px;
+}
+
+.home-title {
+  color: black;
+}
+
+#text-2 {
+  color: black;
+
+}
