@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .wrapper {
-  height: 100vh;
+  height: 100%;
   background:$peach-gradient;
   color:white;
 }
@@ -9,7 +9,6 @@
   text-align: center;
   padding-top:30px;
 }
-
 
 .signup-button {
   text-decoration: none;
@@ -22,7 +21,6 @@
     text-decoration: none;
   }
 }
-
 
 #text-highlighted {
   background-color: #d8ae99;
@@ -57,8 +55,6 @@
   text-shadow: 2px 2px 8px black;
 }
 
-
 .wrapper-sign {
   background:$peach-gradient;
 }
-

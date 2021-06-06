@@ -11,24 +11,25 @@
 <div class="navbar-bg">
   <ul class="navbar">
     <% if user_signed_in? %>
-      <li class="nav-item active">
+      <li>
         <%= link_to root_path, class: "nav-link" do %>
-          <i class="fas fa-home"></i>
+          <i class="fas fa-home <%= 'active' if params[:controller] == "pages" && params[:action] == "home" %>"></i>
         <% end %>
       </li>
-      <li class="nav-item">
+      <li>
         <%= link_to profile_path(current_user.id), class: "nav-link" do %>
-          <i class="far fa-user"></i>
+          <i class="far fa-user <%= 'active' if params[:controller] == "profiles" && params[:action] == "show" %>"></i>
         <% end %>
       </li>
-      <li class="nav-item">
+      <li>
         <%= link_to "#", class: "nav-link" do %>
         <i class="far fa-comments"></i>
       <% end %>
       </li>
-      <li class="nav-item">
+      <li>
         <%= link_to search_path, class: "nav-link" do %>
-        <i class="fas fa-globe-americas"></i>
+        <i class="fas fa-globe-americas <%= 'active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
+
         <% end %>
       </li>
 <!--          <li class="nav-item">
