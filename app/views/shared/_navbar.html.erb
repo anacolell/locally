@@ -13,12 +13,12 @@
     <% if user_signed_in? %>
       <li>
         <%= link_to root_path, class: "nav-link" do %>
-          <i class="fas fa-home <%= 'active' if params[:controller] == "pages" && params[:action] == "home" %>"></i>
+          <i class="fas fa-home <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "home" %>"></i>
         <% end %>
       </li>
       <li>
         <%= link_to profile_path(current_user.id), class: "nav-link" do %>
-          <i class="far fa-user <%= 'active' if params[:controller] == "profiles" && params[:action] == "show" %>"></i>
+          <i class="far fa-user <%= 'nav-active' if params[:controller] == "profiles" && params[:action] == "show" %>"></i>
         <% end %>
       </li>
       <li>
@@ -28,7 +28,7 @@
       </li>
       <li>
         <%= link_to search_path, class: "nav-link" do %>
-        <i class="fas fa-globe-americas <%= 'active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
+        <i class="fas fa-globe-americas <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
 
         <% end %>
       </li>
