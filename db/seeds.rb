@@ -17,7 +17,8 @@
 
 require 'faker'
 puts 'Cleaning database...'
-
+Message.destroy_all
+Conversation.destroy_all
 Interest.destroy_all
 UserInterest.destroy_all
 InterestCategory.destroy_all
