@@ -22,3 +22,4 @@ class UserInterestsController < ApplicationController
     redirect_to new_user_interest_path(anchor: "interest-#{interest.id}")
   end
 end
+

@@ -1,0 +1,94 @@
+.recommendations-wrapper {
+  height:100%;
+  background:$lightpeach2;
+}
+
+.form-recommendations {
+  background:white;
+  padding:16px 20px;
+  padding-bottom: 32px;
+  margin: 50px 0;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  h2 {
+    font-size: 22px;
+    font-weight:bold;
+    margin-top: 20px;
+    margin-bottom:30px;
+    text-align:center;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+input.recommendations-green-btn {
+  background-color: #A4C097;
+  color: white;
+  text-decoration: none;
+  border-style: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.5s;
+  text-align:center;
+  margin-top: 16px;
+  width: 80%;
+  margin-left: 32px;
+}
+
+// .recommendations-btn {
+//   text-align:center;
+//   margin-top:40px;
+// }
+
+.recommendations-green-btn:hover {
+  color:white;
+  text-decoration:none;
+}
+
+label.text.required {
+  color: black;
+  font-size: 14px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input#recommendation_photo {
+  font-size: 14px;
+}
+
+div.form-check {
+ display: inline-block;
+}
+
+label.form-check-label.collection_radio_buttons {
+  padding-right: 32px;
+}
+
+input#recommendation_name {
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 1.5px solid rgb(200, 200, 200);
+}
+
+input#recommendation_location {
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 1.5px solid rgb(200, 200, 200);
+}
+
+textarea#recommendation_description {
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 1.5px solid rgb(200, 200, 200);
+}
+
+input#recommendation_photo {
+  background-color: white;
+}
+
+

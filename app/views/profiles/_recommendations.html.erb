@@ -1,0 +1,14 @@
+<div class="show-card">
+  <h5 class="my-4 profile-subtitle">Recommendations</h5>
+    <% unless @user.recommendations.empty? %>
+      <% @user.recommendations.each do |recommendation| %>
+        <div class="active-tag"><%= recommendation.name %></div>
+      <% end %>
+    <% else %>
+      <p>You haven't added any recommendations yet!<p>
+    <% end %>
+</div>
+
+<div class="show-buttons">
+  <%= link_to "Add recommendations", new_recommendation_path, class:'profile-interest-btn' %>
+</div>

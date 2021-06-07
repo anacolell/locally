@@ -12,14 +12,22 @@ require("select2")
 import "bootstrap";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initSelect2 } from '../plugins/init_select2';
+import { initMapbox } from '../plugins/init_mapbox';
+
 import { initConversationCable } from '../channels/conversation_channel';
 
 document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   initSelect2();
+  initMapbox();
   initConversationCable();
 })
 
+// import { initMapbox } from '../plugins/init_mapbox';
+
+// document.addEventListener('turbolinks:load', () => {
+//   initMapbox();
+// })
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
