@@ -1,8 +1,22 @@
 <div class="show-card">
-  <h5 class="my-4 profile-subtitle">Recommendations</h5>
+  <h5 class="my-4 recommendation-container">
+    My recommendations
+  </h5>
     <% unless @user.recommendations.empty? %>
       <% @user.recommendations.each do |recommendation| %>
-        <div class="active-tag"><%= recommendation.name %></div>
+        <div class="row justify-content-center recommendation-card">
+          <div class="col col-xs-6 col-sm-6 col-md-6">
+          <div class="recommendation-name">
+            <%= recommendation.name %>
+          </div>
+          </div>
+          <div class="col col-xs-6 col-sm-6 col-md-6">
+            <%= recommendation.pricing %>
+          </div>
+        </div>
+        <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-remove-recommendation' do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
       <% end %>
     <% else %>
       <p>You haven't added any recommendations yet!<p>
