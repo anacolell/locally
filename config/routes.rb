@@ -10,6 +10,13 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :create, :destroy, :index]
     resources :reviews, only: [:new, :create, :show, :edit, :update]
   end
+  resources :conversations, only: :show do
+    resources :messages, only: :create
+  end
+  # resources :recommendations, only: [:new, :create, :index, :destroy] do
+  #   resources :bookmarks, only: [:new, :create, :destroy, :index]
+  #   resources :reviews, only: [:new, :create, :show, :edit, :update]
+  # end
   # resources :conversations do
   #   resources :messages, only: [:new, :create, :index, :destroy]
   #   resources :meetups, only: [:new, :create, :edit, :update, :index, :show]

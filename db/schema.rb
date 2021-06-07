@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_06_07_122014) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_122014) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "tourist_id"
     t.integer "local_id"
+    t.string "name"
   end
 
   create_table "interest_categories", force: :cascade do |t|

@@ -9,16 +9,18 @@ require("@rails/activestorage").start()
 require("channels")
 require("select2")
 
-
+import "bootstrap";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initSelect2 } from '../plugins/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 
+import { initConversationCable } from '../channels/conversation_channel';
 
 document.addEventListener('turbolinks:load', () => {
   initAutocomplete();
   initSelect2();
   initMapbox();
+  initConversationCable();
 })
 
 // import { initMapbox } from '../plugins/init_mapbox';
@@ -41,12 +43,3 @@ document.addEventListener('turbolinks:load', () => {
 // ----------------------------------------------------
 
 // External imports
-import "bootstrap";
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-});
