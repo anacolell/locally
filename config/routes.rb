@@ -6,10 +6,10 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :index]
   resources :profiles, only: [:index, :show, :edit, :update]
   resources :user_interests, only: [:new, :create, :index, :show, :destroy]
-  # resources :recommendations, only: [:new, :create, :index, :destroy] do
-  #   resources :bookmarks, only: [:new, :create, :destroy, :index]
-  #   resources :reviews, only: [:new, :create, :show, :edit, :update]
-  # end
+  resources :recommendations, only: [:new, :create, :index, :destroy] do
+    resources :bookmarks, only: [:new, :create, :destroy, :index]
+    resources :reviews, only: [:new, :create, :show, :edit, :update]
+  end
   # resources :conversations do
   #   resources :messages, only: [:new, :create, :index, :destroy]
   #   resources :meetups, only: [:new, :create, :edit, :update, :index, :show]

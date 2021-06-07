@@ -31,3 +31,4 @@ class User < ApplicationRecord
   # validates :birthdate, presence: true
   # validates :profile_type, presence: true, inclusion: { in: PROFILE_TYPE}
 end
+
