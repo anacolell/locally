@@ -4,19 +4,20 @@
   </h5>
     <% unless @user.recommendations.empty? %>
       <% @user.recommendations.each do |recommendation| %>
-        <div class="row justify-content-center recommendation-card">
-          <div class="col col-xs-6 col-sm-6 col-md-6">
-          <div class="recommendation-name">
-            <%= recommendation.name %>
+        <div class="row justify-content-center align-items-center recommendation-card">
+          <div class="col-10">
+            <% if recommendation.photo.attached?  %>
+              <%= cl_image_tag recommendation.photo.key, height: 100, width: 100, crop: :fill, class:"foto-recommendation" %>
+            <% end %>
+              <div id="recommendation-name"><%= recommendation.name %></div>
+              <div id="recommendation-description"><%= recommendation.description %></div>
           </div>
-          </div>
-          <div class="col col-xs-6 col-sm-6 col-md-6">
-            <%= recommendation.pricing %>
+          <div class="col-2 justify-content-right">
+            <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-remove-recommendation' do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
           </div>
         </div>
-        <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" }, class: 'card-remove-recommendation' do %>
-          <i class="fas fa-trash"></i>
-        <% end %>
       <% end %>
     <% else %>
       <p>You haven't added any recommendations yet!<p>

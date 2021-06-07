@@ -5,5 +5,5 @@ class Recommendation < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_location?
   validates :name, presence: true
   validates :description, presence: true
-  has_many_attached :photos
+  has_one_attached :photo
 end

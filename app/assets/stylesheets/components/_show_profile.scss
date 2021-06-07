@@ -103,3 +103,22 @@
 .recommendation-container {
   text-align: center;
 }
+
+.fas.fa-trash {
+  margin-bottom: 46px;
+  margin-left: 12px;
+  font-size: 14px;
+  color: rgba(164, 192, 151, 1);
+
+  &:hover {
+    color: rgba(164, 192, 151, 0.6);
+  }
+}
+
+#recommendation-name {
+  margin-bottom: 8px;
+}
+
+#recommendation-description {
+  font-size: 14px;
+}
