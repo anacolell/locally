@@ -19,6 +19,7 @@ class RecommendationsController < ApplicationController
     authorize current_user
     recommendation = Recommendation.find(params[:id])
     current_user.recommendations.destroy(recommendation)
+    redirect_to profile_path(current_user.id)
     # user_interest = UserInterest.where(interest_id: interest, user_id: current_user).destroy
     # user_interest.destroy
     #redirect_to new_user_interest_path(anchor: "interest-#{interest.id}")
