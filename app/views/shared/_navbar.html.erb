@@ -8,27 +8,26 @@
   </button> -->
 
 <!--   <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-<div class="navbar-bg">
-  <ul class="navbar">
+  <ul class="navbar fixed-bottom">
     <% if user_signed_in? %>
       <li>
         <%= link_to root_path do %>
-          <i class="nav-link fas fa-home <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "home" %>"></i>
+          <i class="navbar-link fas fa-home <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "home" %>"></i>
         <% end %>
       </li>
       <li>
         <%= link_to profile_path(current_user.id) do %>
-          <i class="nav-link far fa-user <%= 'nav-active' if params[:controller] == "profiles" && params[:action] == "show" %>"></i>
+          <i class="navbar-link far fa-user <%= 'nav-active' if params[:controller] == "profiles" && params[:action] == "show" %>"></i>
         <% end %>
       </li>
       <li>
         <%= link_to "#" do %>
-        <i class="nav-link far fa-comments"></i>
+        <i class="navbar-link far fa-comments"></i>
       <% end %>
       </li>
       <li>
         <%= link_to search_path do %>
-        <i class="nav-link fas fa-globe-americas <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
+        <i class="navbar-link fas fa-globe-americas <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
         <% end %>
       </li>
 <!--     <li class="nav-item">
@@ -44,10 +43,9 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%= link_to "Login", new_user_session_path, class: "navbar-link" %>
       </li>
     <% end %>
   </ul>
-</div>
 <!--   </div> -->
 
