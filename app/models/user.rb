@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :interests, through: :user_interests
   has_many :reviews
   has_many :bookmarks
-  has_many :recommendations
+  has_many :recommendations #, through: :bookmarks
   has_many :notifications
   has_many :messages
   has_many :conversations
