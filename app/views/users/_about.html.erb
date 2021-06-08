@@ -1,0 +1,23 @@
+<div class="show-card">
+  <h5 class="my-4 profile-subtitle">Contact me in:</h5>
+    <% if @user.languages %>
+      <% @user.languages.each do |language| %>
+        <% if language == @user.languages.last  %>
+          & <%= language %>
+        <% else  %>
+          <%= language %>
+        <% end %>
+        <% end %>
+    <% end %>
+</div>
+
+<div class="show-card">
+  <h5 class="my-4 profile-subtitle">Interests</h5>
+    <% unless @user.interests.empty? %>
+      <% @user.interests.each do |interest| %>
+        <div class="active-tag"><%= interest.name %></div>
+      <% end %>
+    <% else %>
+      <p>You haven't added any interests yet!<p>
+    <% end %>
+</div>

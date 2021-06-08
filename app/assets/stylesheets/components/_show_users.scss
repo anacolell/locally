@@ -1,0 +1,22 @@
+.show-user-wrapper {
+  height:100%;
+  background: #fadabb;
+}
+
+.contact-green-btn {
+ background-color: #c5d8bc;
+  color: white;
+  text-decoration: none;
+  border-style: none;
+  padding: 8px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.5s;
+  margin-left: 218px;
+  text: bold;
+
+  &:hover {
+    background-color: #9fb792;
+    text-decoration: none;
+  }
+}
