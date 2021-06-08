@@ -163,6 +163,8 @@ pop = Interest.create(name: "Pop", interest_category_id: category.id)
 indie = Interest.create(name: "Indie", interest_category_id: category.id)
 techno = Interest.create(name: "Techno", interest_category_id: category.id)
 
+puts "all interests"
+
 # category = InterestCategory.create(name: "Culture")
 # Interest.create(name: "Museums", interest_category_id: category.id)
 # Interest.create(name: "Painting", interest_category_id: category.id)
@@ -209,21 +211,27 @@ a = User.new(
   username: "Emma",
   first_name: "Emma",
   last_name: "Eriksson",
-  age: 23,
+  birthdate: "1997-02-03",
   location: "Barcelona",
+  city: "Barcelona",
+  country: "Spain",
+  languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 a.photo.attach(io: file, filename: 'some_name', content_type: '')
 a.save!
 
-UserInterest.create!(user: a.id, interest: tennis)
-UserInterest.create!(user: a.id, interest: volleyball)
-UserInterest.create!(user: a.id, interest: clubs)
-UserInterest.create!(user: a.id, interest: badminton)
-UserInterest.create!(user: a.id, interest: bars)
-UserInterest.create!(user: a.id, interest: running)
-UserInterest.create!(user: a.id, interest: indie)
-UserInterest.create!(user: a.id, interest: techno)
+UserInterest.create!(user_id: a.id, interest_id: tennis.id)
+UserInterest.create!(user_id: a.id, interest_id: volleyball.id)
+
+puts "tennis volleyball created"
+
+UserInterest.create!(user_id: a.id, interest_id: clubs.id)
+UserInterest.create!(user_id: a.id, interest_id: badminton.id)
+UserInterest.create!(user_id: a.id, interest_id: bars.id)
+UserInterest.create!(user_id: a.id, interest_id: running.id)
+UserInterest.create!(user_id: a.id, interest_id: indie.id)
+UserInterest.create!(user_id: a.id, interest_id: techno.id)
 
 file = URI.open('https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 b = User.new(
@@ -232,20 +240,23 @@ b = User.new(
   username: "Celia",
   first_name: "Celia",
   last_name: "Young",
-  age: 28,
+  birthdate: "1992-06-06",
   location: "Barcelona",
+  city: "Barcelona",
+  country: "Spain",
+  languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 b.photo.attach(io: file, filename: 'some_name', content_type: '')
 b.save!
 
-UserInterest.create!(user: b.id, interest: tennis)
-UserInterest.create!(user: b.id, interest: coffee)
-UserInterest.create!(user: b.id, interest: pubs)
-UserInterest.create!(user: b.id, interest: dancing)
-UserInterest.create!(user: b.id, interest: gym)
-UserInterest.create!(user: b.id, interest: electronic)
-UserInterest.create!(user: b.id, interest: alternative)
+UserInterest.create!(user_id: b.id, interest_id: tennis.id)
+UserInterest.create!(user_id: b.id, interest_id: coffee.id)
+UserInterest.create!(user_id: b.id, interest_id: pubs.id)
+UserInterest.create!(user_id: b.id, interest_id: dancing.id)
+UserInterest.create!(user_id: b.id, interest_id: gym.id)
+UserInterest.create!(user_id: b.id, interest_id: electronic.id)
+UserInterest.create!(user_id: b.id, interest_id: alternative.id)
 
 file = URI.open('https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 c = User.new(
@@ -254,21 +265,22 @@ c = User.new(
   username: "Lily",
   first_name: "Lily",
   last_name: "Jackson",
-  age: 27,
+  birthdate: "1990-01-03",
   location: "Barcelona",
+  country: "Spain",
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 c.photo.attach(io: file, filename: 'some_name', content_type: '')
 c.save!
 
-UserInterest.create!(user: c.id, interest: dancing)
-UserInterest.create!(user: c.id, interest: coffee)
-UserInterest.create!(user: c.id, interest: restaurants)
-UserInterest.create!(user: c.id, interest: badminton)
-UserInterest.create!(user: c.id, interest: tennis)
-UserInterest.create!(user: c.id, interest: football)
-UserInterest.create!(user: c.id, interest: pop)
-UserInterest.create!(user: c.id, interest: country)
+UserInterest.create!(user_id: c.id, interest_id: dancing.id)
+UserInterest.create!(user_id: c.id, interest_id: coffee.id)
+UserInterest.create!(user_id: c.id, interest_id: restaurants.id)
+UserInterest.create!(user_id: c.id, interest_id: badminton.id)
+UserInterest.create!(user_id: c.id, interest_id: tennis.id)
+UserInterest.create!(user_id: c.id, interest_id: football.id)
+UserInterest.create!(user_id: c.id, interest_id: pop.id)
+UserInterest.create!(user_id: c.id, interest_id: country.id)
 
 d = User.new(
   email: "d@test.com",
@@ -276,20 +288,23 @@ d = User.new(
   username: "Rita",
   first_name: "Rita",
   last_name: "Dirla",
-  age: 27,
+  birthdate: "1986-05-03",
   location: "Barcelona",
+  city: "Barcelona",
+  country: "Spain",
+  languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 d.save!
 
-UserInterest.create!(user: d.id, interest: volleyball)
-UserInterest.create!(user: d.id, interest: coffee)
-UserInterest.create!(user: d.id, interest: restaurants)
-UserInterest.create!(user: d.id, interest: badminton)
-UserInterest.create!(user: d.id, interest: tennis)
-UserInterest.create!(user: d.id, interest: football)
-UserInterest.create!(user: d.id, interest: electronic)
-UserInterest.create!(user: d.id, interest: techno)
+UserInterest.create!(user_id: d.id, interest_id: volleyball.id)
+UserInterest.create!(user_id: d.id, interest_id: coffee.id)
+UserInterest.create!(user_id: d.id, interest_id: restaurants.id)
+UserInterest.create!(user_id: d.id, interest_id: badminton.id)
+UserInterest.create!(user_id: d.id, interest_id: tennis.id)
+UserInterest.create!(user_id: d.id, interest_id: football.id)
+UserInterest.create!(user_id: d.id, interest_id: electronic.id)
+UserInterest.create!(user_id: d.id, interest_id: techno.id)
 
 file = URI.open('https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 e = User.new(
@@ -298,21 +313,24 @@ e = User.new(
   username: "John",
   first_name: "John",
   last_name: "Lee",
-  age: 28,
+  birthdate: "1989-08-27",
   location: "Barcelona",
+  city: "Barcelona",
+  country: "Spain",
+  languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 e.photo.attach(io: file, filename: 'some_name', content_type: '')
 e.save!
 
-UserInterest.create!(user: e.id, interest: bars)
-UserInterest.create!(user: e.id, interest: hockey)
-UserInterest.create!(user: e.id, interest: climbing)
-UserInterest.create!(user: e.id, interest: indie)
-UserInterest.create!(user: e.id, interest: coffee)
-UserInterest.create!(user: e.id, interest: restaurants)
-UserInterest.create!(user: e.id, interest: jazz)
-UserInterest.create!(user: e.id, interest: techno)
+UserInterest.create!(user_id: e.id, interest_id: bars.id)
+UserInterest.create!(user_id: e.id, interest_id: hockey.id)
+UserInterest.create!(user_id: e.id, interest_id: climbing.id)
+UserInterest.create!(user_id: e.id, interest_id: indie.id)
+UserInterest.create!(user_id: e.id, interest_id: coffee.id)
+UserInterest.create!(user_id: e.id, interest_id: restaurants.id)
+UserInterest.create!(user_id: e.id, interest_id: jazz.id)
+UserInterest.create!(user_id: e.id, interest_id: techno.id)
 
 file = URI.open('https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxwZW9wbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 f = User.new(
@@ -321,19 +339,21 @@ f = User.new(
   username: "Antonio",
   first_name: "Antonio",
   last_name: "Perreira",
-  age: 25,
+  birthdate: "1997-04-03",
   location: "Barcelona",
+  city: "Barcelona",
+  country: "Spain",
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 f.photo.attach(io: file, filename: 'some_name', content_type: '')
 f.save!
 
-UserInterest.create!(user: f.id, interest: restaurants)
-UserInterest.create!(user: f.id, interest: bars)
-UserInterest.create!(user: f.id, interest: dancing)
-UserInterest.create!(user: f.id, interest: tennis)
-UserInterest.create!(user: f.id, interest: volleyball)
-UserInterest.create!(user: f.id, interest: indie)
+UserInterest.create!(user_id: f.id, interest_id: restaurants.id)
+UserInterest.create!(user_id: f.id, interest_id: bars.id)
+UserInterest.create!(user_id: f.id, interest_id: dancing.id)
+UserInterest.create!(user_id: f.id, interest_id: tennis.id)
+UserInterest.create!(user_id: f.id, interest_id: volleyball.id)
+UserInterest.create!(user_id: f.id, interest_id: indie.id)
 
 file = URI.open('https://images.unsplash.com/photo-1508908324153-d1a219719814?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1lbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 g = User.new(
@@ -342,23 +362,28 @@ g = User.new(
   username: "Andres",
   first_name: "Andres",
   last_name: "Michaelsson",
-  age: 30,
+  birthdate: "1990-09-28",
   location: "Barcelona",
+  city: "Barcelona",
+  country: "Spain",
+  languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 g.photo.attach(io: file, filename: 'some_name', content_type: '')
 g.save!
 
-UserInterest.create!(user: g.id, interest: volleyball)
-UserInterest.create!(user: g.id, interest: climbing)
-UserInterest.create!(user: g.id, interest: vegan)
-UserInterest.create!(user: g.id, interest: tennis)
-UserInterest.create!(user: g.id, interest: volleyball)
-UserInterest.create!(user: g.id, interest: indie)
-UserInterest.create!(user: g.id, interest: techno)
+UserInterest.create!(user_id: g.id, interest_id: volleyball.id)
+UserInterest.create!(user_id: g.id, interest_id: climbing.id)
+UserInterest.create!(user_id: g.id, interest_id: vegan.id)
+UserInterest.create!(user_id: g.id, interest_id: tennis.id)
+UserInterest.create!(user_id: g.id, interest_id: volleyball.id)
+UserInterest.create!(user_id: g.id, interest_id: indie.id)
+UserInterest.create!(user_id: g.id, interest_id: techno.id)
+
+puts "all users created"
 
 # h = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest: tennis)
+# UserInterest.create!(user: d, interest_id: tennis)
 # UserInterest.create!(user: d, interest: volleyball)
 # UserInterest.create!(user: d, interest: coffee)
 # UserInterest.create!(user: d, interest: badminton)

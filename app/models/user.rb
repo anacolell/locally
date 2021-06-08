@@ -25,6 +25,7 @@ class User < ApplicationRecord
       (Time.now.to_s(:number).to_i - self.birthdate.to_time.to_s(:number).to_i) / 10e9.to_i
     end
   end
+
   # validates :description, presence: true, length: { maximum: 500 }
   # validates :gender, presence: true, inclusion: { in: GENDER }
   # validates :location, presence: true
