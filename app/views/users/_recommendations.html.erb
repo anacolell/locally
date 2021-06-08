@@ -16,7 +16,9 @@
                 <strong id="recommendation-pricing"><%= recommendation.pricing %></strong>
               </div>
               <div class="col col-xs-4 recommendation-bookmark">
-                <i class="fas fa-bookmark"></i>
+                <%= link_to recommendation_bookmarks_path(recommendation), method: :post do %>
+                  <i class="fas fa-bookmark"></i>
+                <% end %>
               </div>
               <div class="col col-xs-6 delete-button">
                 <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" } do %>

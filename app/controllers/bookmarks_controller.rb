@@ -1,17 +1,29 @@
 class BookmarksController < ApplicationController
+
+  # def index
+  #   @bookmarks = policy_scope(Bookmark)
+  #   # authorize current_user
+  # end
+
   def new
-    authorize current_user
+    @user = current_user
+    @recommendation = Recommendation.find(params[:recommendation_id])
     @bookmark = Bookmark.new
+    authorize @bookmark
     # @user = current_user
   end
 
   def create
-    authorize current_user
-    @bookmark = Bookmark.new(bookmark_params)
-    @bookmark.user_id = current_user.id
-    @bookmark.recommendation_id = Recommendation.find(params[:id])
+    @recommendation = Recommendation.find(params[:recommendation_id])
+    @user = @recommendation.user
+    @bookmark = Bookmark.new(user_id: current_user.id, recommendation_id: @recommendation.id)
+    authorize @bookmark
     @bookmark.save
-    redirect_to profile_path(current_user.id)
+    flash[:notice] = "A bookmark was created!"
+    redirect_to user_path(@user)
+    # else
+    #   flash[:notice] = "This recommendation could not be bookmarked."
+    # end
     #redirect_to new_recommendation_path(anchor: "interest-#{interest.id}") if recommendation.save
   end
 

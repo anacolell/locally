@@ -207,6 +207,7 @@ puts "all interests"
 # Interest.create(name: "Psychology", interest_category_id: category.id)
 # Interest.create(name: "Physics", interest_category_id: category.id)
 
+
 file = URI.open('https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 a = User.new(
   email: "a@test.com",
@@ -223,6 +224,8 @@ a = User.new(
   )
 a.photo.attach(io: file, filename: 'some_name', content_type: '')
 a.save!
+
+Recommendation.create!(name: 'Söderhallarna', location: 'Medborgarplatsen 3', description: 'nice foodhall', pricing: 'free', user_id: a.id)
 
 UserInterest.create!(user_id: a.id, interest_id: tennis.id)
 UserInterest.create!(user_id: a.id, interest_id: volleyball.id)
