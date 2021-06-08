@@ -7,6 +7,12 @@
             <% if conversation.local == current_user %>
               <%= cl_image_tag conversation.tourist.photo.key %>
               <p> Chat with <%= conversation.tourist.first_name %>, <%= conversation.tourist.city %></p>
+              <%= link_to conversation_path(conversation), class: 'open-chat-btn' do %>
+                <i class="fas fa-comments"></i>
+              <% end %>
+               <%= link_to conversation_path(conversation), method: :delete, class: 'delete-btn-chat' do %>
+              <i class="fas fa-times"></i>
+            <% end %>
             <% else %>
               <%= cl_image_tag conversation.local.photo.key %>
               <p>Chat with <%= conversation.local.first_name %>, <%= conversation.local.city %></p>
