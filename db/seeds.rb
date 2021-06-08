@@ -16,7 +16,10 @@
 # interests.create(name: 'Food')
 
 require 'faker'
+require 'open-uri'
+
 puts 'Cleaning database...'
+Recommendation.destroy_all
 Message.destroy_all
 Conversation.destroy_all
 Interest.destroy_all

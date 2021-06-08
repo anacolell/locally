@@ -1,6 +1,6 @@
 <div class="chat-wrapper">
   <div class="chat-header">
-    <h4>Chat with <%= @conversation.local.email %></h4>
+    <h4>Chat with <%= @conversation.local.first_name %> from <%= @conversation.local.city %></h4>
   </div>
 
   <div id="messages" data-conversation-id="<%= @conversation.id %>">
