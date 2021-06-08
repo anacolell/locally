@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.7'
 # devise gem
 gem 'devise'
 gem 'faker'
+
+gem 'redis-rails'
+
 # pundit
 gem 'pundit'
 gem 'geocoder'
