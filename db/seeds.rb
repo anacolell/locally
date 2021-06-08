@@ -271,6 +271,7 @@ c = User.new(
   last_name: "Jackson",
   birthdate: "1990-01-03",
   location: "Barcelona",
+  city: "Barcelona",
   country: "Spain",
   languages: ["English", "Swedish", "Italian"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
