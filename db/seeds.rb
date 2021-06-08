@@ -207,134 +207,155 @@ a = User.new(
   email: "a@test.com",
   password: "123456",
   username: "Emma",
+  first_name: "Emma",
+  last_name: "Eriksson",
   age: 23,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 a.photo.attach(io: file, filename: 'some_name', content_type: '')
 a.save!
 
-UserInterest.create!(user: a, interest: tennis)
-UserInterest.create!(user: a, interest: volleyball)
-UserInterest.create!(user: a, interest: clubs)
-UserInterest.create!(user: a, interest: badminton)
-UserInterest.create!(user: a, interest: bars)
-UserInterest.create!(user: a, interest: running)
-UserInterest.create!(user: a, interest: indie)
-UserInterest.create!(user: a, interest: techno)
+UserInterest.create!(user: a.id, interest: tennis)
+UserInterest.create!(user: a.id, interest: volleyball)
+UserInterest.create!(user: a.id, interest: clubs)
+UserInterest.create!(user: a.id, interest: badminton)
+UserInterest.create!(user: a.id, interest: bars)
+UserInterest.create!(user: a.id, interest: running)
+UserInterest.create!(user: a.id, interest: indie)
+UserInterest.create!(user: a.id, interest: techno)
 
 file = URI.open('https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 b = User.new(
   email: "b@test.com",
   password: "123456",
   username: "Celia",
+  first_name: "Celia",
+  last_name: "Young",
   age: 28,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 b.photo.attach(io: file, filename: 'some_name', content_type: '')
 b.save!
 
-UserInterest.create!(user: b, interest: tennis)
-UserInterest.create!(user: b, interest: coffee)
-UserInterest.create!(user: b, interest: pubs)
-UserInterest.create!(user: b, interest: dancing)
-UserInterest.create!(user: b, interest: gym)
-UserInterest.create!(user: b, interest: electronic)
-UserInterest.create!(user: b, interest: alternative)
+UserInterest.create!(user: b.id, interest: tennis)
+UserInterest.create!(user: b.id, interest: coffee)
+UserInterest.create!(user: b.id, interest: pubs)
+UserInterest.create!(user: b.id, interest: dancing)
+UserInterest.create!(user: b.id, interest: gym)
+UserInterest.create!(user: b.id, interest: electronic)
+UserInterest.create!(user: b.id, interest: alternative)
 
 file = URI.open('https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 c = User.new(
   email: "c@test.com",
   password: "123456",
   username: "Lily",
+  first_name: "Lily",
+  last_name: "Jackson",
   age: 27,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 c.photo.attach(io: file, filename: 'some_name', content_type: '')
 c.save!
 
-UserInterest.create!(user: c, interest: dancing)
-UserInterest.create!(user: c, interest: coffee)
-UserInterest.create!(user: c, interest: restaurants)
-UserInterest.create!(user: c, interest: badminton)
-UserInterest.create!(user: c, interest: tennis)
-UserInterest.create!(user: c, interest: football)
-UserInterest.create!(user: c, interest: pop)
-UserInterest.create!(user: c, interest: country)
+UserInterest.create!(user: c.id, interest: dancing)
+UserInterest.create!(user: c.id, interest: coffee)
+UserInterest.create!(user: c.id, interest: restaurants)
+UserInterest.create!(user: c.id, interest: badminton)
+UserInterest.create!(user: c.id, interest: tennis)
+UserInterest.create!(user: c.id, interest: football)
+UserInterest.create!(user: c.id, interest: pop)
+UserInterest.create!(user: c.id, interest: country)
 
 d = User.new(
   email: "d@test.com",
   password: "123456",
   username: "Rita",
+  first_name: "Rita",
+  last_name: "Dirla",
   age: 27,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 d.save!
 
-UserInterest.create!(user: d, interest: volleyball)
-UserInterest.create!(user: d, interest: coffee)
-UserInterest.create!(user: d, interest: restaurants)
-UserInterest.create!(user: d, interest: badminton)
-UserInterest.create!(user: d, interest: tennis)
-UserInterest.create!(user: d, interest: football)
-UserInterest.create!(user: d, interest: electronic)
-UserInterest.create!(user: d, interest: techno)
+UserInterest.create!(user: d.id, interest: volleyball)
+UserInterest.create!(user: d.id, interest: coffee)
+UserInterest.create!(user: d.id, interest: restaurants)
+UserInterest.create!(user: d.id, interest: badminton)
+UserInterest.create!(user: d.id, interest: tennis)
+UserInterest.create!(user: d.id, interest: football)
+UserInterest.create!(user: d.id, interest: electronic)
+UserInterest.create!(user: d.id, interest: techno)
 
 file = URI.open('https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 e = User.new(
   email: "e@test.com",
   password: "123456",
   username: "John",
+  first_name: "John",
+  last_name: "Lee",
   age: 28,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 e.photo.attach(io: file, filename: 'some_name', content_type: '')
 e.save!
 
-UserInterest.create!(user: e, interest: bars)
-UserInterest.create!(user: e, interest: hockey)
-UserInterest.create!(user: e, interest: climbing)
-UserInterest.create!(user: e, interest: indie)
-UserInterest.create!(user: e, interest: coffee)
-UserInterest.create!(user: e, interest: restaurants)
-UserInterest.create!(user: e, interest: jazz)
-UserInterest.create!(user: e, interest: techno)
+UserInterest.create!(user: e.id, interest: bars)
+UserInterest.create!(user: e.id, interest: hockey)
+UserInterest.create!(user: e.id, interest: climbing)
+UserInterest.create!(user: e.id, interest: indie)
+UserInterest.create!(user: e.id, interest: coffee)
+UserInterest.create!(user: e.id, interest: restaurants)
+UserInterest.create!(user: e.id, interest: jazz)
+UserInterest.create!(user: e.id, interest: techno)
 
 file = URI.open('https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxwZW9wbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 f = User.new(
   email: "f@test.com",
   password: "123456",
   username: "Antonio",
+  first_name: "Antonio",
+  last_name: "Perreira",
   age: 25,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 f.photo.attach(io: file, filename: 'some_name', content_type: '')
 f.save!
 
-UserInterest.create!(user: f, interest: restaurants)
-UserInterest.create!(user: f, interest: bars)
-UserInterest.create!(user: f, interest: dancing)
-UserInterest.create!(user: f, interest: tennis)
-UserInterest.create!(user: f, interest: volleyball)
-UserInterest.create!(user: f, interest: indie)
+UserInterest.create!(user: f.id, interest: restaurants)
+UserInterest.create!(user: f.id, interest: bars)
+UserInterest.create!(user: f.id, interest: dancing)
+UserInterest.create!(user: f.id, interest: tennis)
+UserInterest.create!(user: f.id, interest: volleyball)
+UserInterest.create!(user: f.id, interest: indie)
 
 file = URI.open('https://images.unsplash.com/photo-1508908324153-d1a219719814?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1lbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 g = User.new(
   email: "g@test.com",
   password: "123456",
   username: "Andres",
+  first_name: "Andres",
+  last_name: "Michaelsson",
   age: 30,
   location: "Barcelona",
+  description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 g.photo.attach(io: file, filename: 'some_name', content_type: '')
 g.save!
 
-UserInterest.create!(user: g, interest: volleyball)
-UserInterest.create!(user: g, interest: climbing)
-UserInterest.create!(user: g, interest: vegan)
-UserInterest.create!(user: g, interest: tennis)
-UserInterest.create!(user: g, interest: volleyball)
-UserInterest.create!(user: g, interest: indie)
-UserInterest.create!(user: g, interest: techno)
+UserInterest.create!(user: g.id, interest: volleyball)
+UserInterest.create!(user: g.id, interest: climbing)
+UserInterest.create!(user: g.id, interest: vegan)
+UserInterest.create!(user: g.id, interest: tennis)
+UserInterest.create!(user: g.id, interest: volleyball)
+UserInterest.create!(user: g.id, interest: indie)
+UserInterest.create!(user: g.id, interest: techno)
 
 # h = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
 # UserInterest.create!(user: d, interest: tennis)

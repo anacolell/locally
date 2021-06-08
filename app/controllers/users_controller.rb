@@ -40,12 +40,16 @@ class UsersController < ApplicationController
     matching = 0
     if @tourist_interests_count < locals_interests_count
       matching = matching_interests / @tourist_interests_count
-    elsif @tourist_interests_count >= locals_interests_count
+    elsif @tourist_interests_count >= locals_interests_count && locals_interests_count > 0.0
       matching = matching_interests / locals_interests_count
     end
     matching
   end
 
+  def show
+    @user = User.find(params[:id])
+    authorize @user
+  end
 
   private
 
