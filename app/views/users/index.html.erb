@@ -10,7 +10,8 @@
 
   <% if params[:commit] == "Let's go!" %>
     <% local_array = @locals_location.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
-    <% local_array. each do |local| %>
+    <% local_array.each do |local| %>
+      <% unless Conversation.where(local: local, tourist: current_user).any? %>
       <div class="local-card">
         <div class="row">
           <div class="col-2">
@@ -45,7 +46,9 @@
         </div>
       </div>
     <% end %>
+    <% end %>
   <% else %>
+  <% unless Conversation.where(local: local, tourist: current_user).any? %>
       <div class="local-card">
         <div class="row">
           <div class="col-2">
@@ -79,5 +82,6 @@
           </div>
         </div>
       </div>
+    <% end %>
   <% end %>
 </div>
