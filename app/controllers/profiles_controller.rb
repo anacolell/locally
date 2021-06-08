@@ -8,6 +8,14 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     authorize @user
+    @recommendations = Recommendation.all
+    @recommendation_markers = @recommendations.geocoded.map do |recommendation|
+      {
+        lat: recommendation.latitude,
+        long: recommendation.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { recommendation: recommendation })
+      }
+    end
   end
 
   def edit
