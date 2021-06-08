@@ -11,7 +11,8 @@ class RecommendationsController < ApplicationController
     @recommendation = Recommendation.new(recommendation_params)
     @recommendation.user_id = current_user.id
     @recommendation.save
-    redirect_to profile_path(current_user.id)
+    # redirect_to profile_path(current_user.id)
+    redirect_to profile_path(tab: "profile_tab")
     #redirect_to new_recommendation_path(anchor: "interest-#{interest.id}") if recommendation.save
   end
 
