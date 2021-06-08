@@ -215,7 +215,7 @@ a = User.new(
   location: "Barcelona",
   city: "Barcelona",
   country: "Spain",
-  languages: ["Spanish", "English"],
+  languages: ["Spanish", "English", "Swedish",],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 a.photo.attach(io: file, filename: 'some_name', content_type: '')
@@ -223,8 +223,6 @@ a.save!
 
 UserInterest.create!(user_id: a.id, interest_id: tennis.id)
 UserInterest.create!(user_id: a.id, interest_id: volleyball.id)
-
-puts "tennis volleyball created"
 
 UserInterest.create!(user_id: a.id, interest_id: clubs.id)
 UserInterest.create!(user_id: a.id, interest_id: badminton.id)
@@ -268,6 +266,7 @@ c = User.new(
   birthdate: "1990-01-03",
   location: "Barcelona",
   country: "Spain",
+  languages: ["English", "Swedish", "Italian"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 c.photo.attach(io: file, filename: 'some_name', content_type: '')
@@ -317,7 +316,7 @@ e = User.new(
   location: "Barcelona",
   city: "Barcelona",
   country: "Spain",
-  languages: ["Spanish", "English"],
+  languages: ["English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 e.photo.attach(io: file, filename: 'some_name', content_type: '')
@@ -343,6 +342,7 @@ f = User.new(
   location: "Barcelona",
   city: "Barcelona",
   country: "Spain",
+  languages: ["Spanish", "English", "Arabic"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
 f.photo.attach(io: file, filename: 'some_name', content_type: '')
