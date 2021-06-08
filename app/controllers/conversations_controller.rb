@@ -1,6 +1,9 @@
 class ConversationsController < ApplicationController
   def index
-    @conversations = Conversation.all
+    @user = current_user
+    authorize @user
+    @conversations = policy_scope(Conversation).where(tourist_id: current_user.id).or(policy_scope(Conversation).where(local_id: current_user.id))
+    @conversations = @conversations.order(created_at: :desc)
   end
 
   def show
@@ -26,6 +29,15 @@ class ConversationsController < ApplicationController
         render :new
       end
   end
+
+  # def destroy
+  #   @conversation = Conversation.find(params[:id])
+  #   if @conversation.destroy
+  #     redirect_to conversations_paths(@conversation)
+  #   else
+  #     render :new
+  #   end
+  # end
 
   private
 
