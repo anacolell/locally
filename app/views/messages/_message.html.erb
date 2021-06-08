@@ -1,8 +1,8 @@
-<div class="message-container <%= 'right' if current_user.id == message.user_id %>" id="message-<%= message.id %>">
-  <div class="bubble">
-    <%= message.content %>
-  </div>
-  <div class="chat-details">
-    <small><%= message.created_at.strftime("%a, %H:%M") %></small> <!-- ("%l:%M %p  |  %b %e") -->
+<div class="message-wrapper <%= 'd-flex justify-content-end' if current_user.id == message.user_id %>">
+  <div class="message-container <%= 'right' if current_user.id == message.user_id %>" id="message-<%= message.id %>">
+      <%= message.content %>
+    <div class="chat-details">
+      <small><%= message.created_at.strftime("%a, %H:%M") %></small>
+    </div>
   </div>
 </div>

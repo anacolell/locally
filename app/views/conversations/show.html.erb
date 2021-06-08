@@ -1,13 +1,20 @@
-<h4 class="my-2">Chat with</h4>
 <div class="chat-wrapper">
+  <div class="chat-header">
+    <h4>Chat with</h4>
+  </div>
+
   <div id="messages" data-conversation-id="<%= @conversation.id %>">
     <% @conversation.messages.each do |message| %>
       <%= render 'messages/message', message: message %>
     <% end %>
   </div>
 
-  <%= simple_form_for [ @conversation, @message ], remote: true, class:"create-message-form"  do |f| %>
-    <%= f.input :content, label: false, placeholder: "Type in your message", class:"chat-input" %>
-    <%= f.submit 'Send', class:"chat-send-btn" %>
-  <% end %>
+  <div class="chat-input fixed-bottom">
+    <%= simple_form_for [ @conversation, @message ], html: { class: "form-row d-flex justify-content-around"}, remote: true do |f| %>
+    <%= f.input :content, label: false, wrapper_html: { class: "flex-grow-1", style: "height: 40px" } %>
+    <%= button_tag(type: 'submit', class: "chat-btn flex-grow-0", style: "width: 55px") do %>
+      <i class="fas fa-paper-plane chat-icon" ></i>
+    <% end %>
+    <% end %>
+  </div>
 </div>
