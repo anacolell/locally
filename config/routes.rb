@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/search', to: 'pages#search'
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index] do
+    resources :conversations, only: :create
+  end
   resources :profiles, only: [:index, :show, :edit, :update]
   resources :user_interests, only: [:new, :create, :index, :show, :destroy]
   resources :recommendations, only: [:new, :create, :index, :destroy] do
