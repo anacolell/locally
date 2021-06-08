@@ -93,11 +93,13 @@
 }
 
 .recommendation-card {
-  margin: 8px auto;
-  border: 1px solid rgb(230, 230, 230);
-  width: 95%;
-  padding: 16px 16px;
-  border-radius: 8px;
+  height: fit-content;
+  margin: 20px auto;
+  background-color: rgba(240, 240, 240, 0.4);
+  border-radius: 16px;
+  text-align: center;
+  padding-bottom: 8px;
+  box-shadow: 2px 2px 4px rgba(230, 230, 230, 0.5);
 }
 
 .recommendation-container {
@@ -105,20 +107,47 @@
 }
 
 .fas.fa-trash {
-  margin-bottom: 46px;
-  margin-left: 12px;
-  font-size: 14px;
-  color: rgba(164, 192, 151, 1);
+  font-size: 16px;
+  color: rgba(110, 110, 110, 0.8);
 
   &:hover {
-    color: rgba(164, 192, 151, 0.6);
+    color: $peach;
   }
 }
 
 #recommendation-name {
-  margin-bottom: 8px;
+  margin: 8px 0px;
+  font-weight: bolder;
 }
 
 #recommendation-description {
   font-size: 14px;
+  margin: 8px 8px;
+}
+
+.foto-recommendation {
+  height: 150px;
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+  margin-bottom: 8px;
+}
+
+.delete-button {
+  text-align: center;
+}
+
+// .recommendation-bookmark {
+//   color: rgba(110, 110, 110, 0.8);
+//   &:hover {
+//     color: $peach;
+//   }
+// }
+
+#recommendation-pricing {
+  color: rgba(110, 110, 110, 0.8);
+}
+
+hr {
+  margin-bottom: 8px;
+  background-color: white;
 }
