@@ -19,7 +19,7 @@
                           placeholder: 'Last name',
                           required:true %>
               <%= f.input :gender, collection: User::GENDER %>
-              <%= f.input :city,
+              <%= f.input :location,
                           required: true %>
               <%= f.input :country, as: :select,
                           collection: User::COUNTRIES,

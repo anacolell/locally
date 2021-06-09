@@ -48,7 +48,7 @@
     <% end %>
     <% end %>
   <% else %>
-  <% unless Conversation.where(local: local, tourist: current_user).any? %>
+  <% unless Conversation.where(local: @random_local, tourist: current_user).any? %>
       <div class="local-card">
         <div class="row">
           <div class="col-2">
