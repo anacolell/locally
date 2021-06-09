@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 
   def index
     @users = policy_scope(User)
-
     if params[:commit] == "Let's go!"
       @locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
       @locals_location.each do |local|
