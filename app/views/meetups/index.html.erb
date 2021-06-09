@@ -1,23 +1,31 @@
 <div class="meetup-card">
   <h5 class="meetup-card-title">Upcoming meetups:</h5>
    <% @user.meetups_as_tourist.each do |meetup| %>
-   <div class="card-conversation">
+   <div class="card-meetups">
     <div class="card-meetup-text">
      <p>Meetup with: <%= meetup.local.first_name %></p>
      <p>Location: <%= meetup.location %></p>
      <p>Date: <%= meetup.date_time %></p>
    </div>
+     <% if meetup.local.photo.attached? %>
      <%= cl_image_tag meetup.local.photo.key %>
+     <% else %>
+      <%= image_tag('user.png') %>
+      <% end %>
     </div>
    <% end %>
    <% @user.meetups_as_local.each do |meetup| %>
-   <div class="card-conversation">
+   <div class="card-meetups">
      <div class="card-meetup-text">
-       <p>Meetup with: <%= meetup.local.first_name %></p>
+       <p>Meetup with: <%= meetup.tourist.first_name %></p>
        <p>Location: <%= meetup.location %></p>
        <p>Date: <%= meetup.date_time %></p>
       </div>
+      <% if conversation.tourist.photo.attached? %>
        <%= cl_image_tag meetup.tourist.photo.key %>
+        <% else %>
+        <%= image_tag('user.png') %>
+      <% end %>
     </div>
    <% end %>
 </div>
