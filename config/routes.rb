@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   resources :bookmarks, only: [:destroy]
   resources :conversations, only: [:show, :index, :destroy] do
     resources :messages, only: :create
+    resources :meetups, only: [:new, :create]
   end
+  resources :meetups, only: [:edit, :update, :destroy, :show]
   # resources :recommendations, only: [:new, :create, :index, :destroy] do
   #   resources :bookmarks, only: [:new, :create, :destroy, :index]
   #   resources :reviews, only: [:new, :create, :show, :edit, :update]
