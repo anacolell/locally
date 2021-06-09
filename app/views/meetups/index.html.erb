@@ -1,0 +1,6 @@
+<div class="show-card">
+  <h5 class="my-4 profile-subtitle">Upcoming meetups:</h5>
+   <% @user.meetups_as_tourist.each do |meetup| %>
+   <%= meetup.local.first_name %>
+   <% end %>
+</div>
