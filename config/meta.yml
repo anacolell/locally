@@ -1,0 +1,5 @@
+meta_product_name: "Locally"
+meta_title: "Locally - Bringing locals and travelers together."
+meta_description: "Locally brings together travellers and locals based on mutual interests, as well as provide recommendations to give users the best local experience."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
