@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 2021_06_09_100758) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "local_id"
     t.integer "tourist_id"
+    t.datetime "time"
   end
 
   create_table "messages", force: :cascade do |t|
