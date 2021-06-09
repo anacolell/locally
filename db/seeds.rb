@@ -19,6 +19,7 @@ require 'faker'
 require 'open-uri'
 
 puts 'Cleaning database...'
+Bookmark.destroy_all
 Recommendation.destroy_all
 Message.destroy_all
 Conversation.destroy_all
@@ -217,7 +218,7 @@ a = User.new(
   last_name: "Eriksson",
   birthdate: "1997-02-03",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English", "Swedish",],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -246,7 +247,7 @@ b = User.new(
   last_name: "Young",
   birthdate: "1992-06-06",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -271,7 +272,7 @@ c = User.new(
   last_name: "Jackson",
   birthdate: "1990-01-03",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["English", "Swedish", "Italian"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -296,7 +297,7 @@ d = User.new(
   last_name: "Dirla",
   birthdate: "1986-05-03",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -321,7 +322,7 @@ e = User.new(
   last_name: "Lee",
   birthdate: "1989-08-27",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -347,7 +348,7 @@ f = User.new(
   last_name: "Perreira",
   birthdate: "1997-04-03",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English", "Arabic"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -371,7 +372,7 @@ g = User.new(
   last_name: "Michaelsson",
   birthdate: "1990-09-28",
   location: "Barcelona",
-  city: "Barcelona",
+  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
