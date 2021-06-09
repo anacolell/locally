@@ -1,6 +1,19 @@
-.meetups-wrapper {
-  height:100vh;
-  background:$peach-gradient;
+// .meetups-wrapper {
+//   height:100vh;
+//   background:$peach-gradient;
+// }
+
+.meetup-card {
+  background-color: $lightpeach;
+  margin: 30px 0;
+  padding:10px;
+  padding-bottom:30px;
+}
+
+.meetup-card-title {
+  color: #fff;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .form-meetups {
@@ -17,3 +30,14 @@
   text-align:center;
 }
 
+/* meetups index */
+.card-conversation {
+  overflow: hidden;
+  height: 140px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  margin-top:20px;
+  border-radius: 5px;
+}
