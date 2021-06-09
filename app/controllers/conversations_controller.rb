@@ -11,6 +11,13 @@ class ConversationsController < ApplicationController
     authorize @user
     @conversation = Conversation.find(params[:id])
     @message = Message.new
+    @notifications = current_user.notifications.where(conversation: @conversation).where(seen: false)
+    if @notifications.any?
+      @notifications.each do |notif|
+        notif.seen = true
+        notif.save
+      end
+    end
   end
 
   def new

@@ -1,5 +1,4 @@
 class Notification < ApplicationRecord
   belongs_to :user
-
-  validates :content, presence: true
+  belongs_to :conversation
 end
