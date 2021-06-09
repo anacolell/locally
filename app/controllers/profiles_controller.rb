@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     authorize @user
-    @recommendations = Recommendation.all
+    @recommendations = Recommendation.where(user_id: @user.id)
     @recommendation_markers = @recommendations.geocoded.map do |recommendation|
       {
         lat: recommendation.latitude,
