@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :show, :edit, :update]
   end
   resources :bookmarks, only: [:destroy]
-  resources :conversations, only: [:show, :index, :delete] do
+  resources :conversations, only: [:show, :index, :destroy] do
     resources :messages, only: :create
   end
   # resources :recommendations, only: [:new, :create, :index, :destroy] do
