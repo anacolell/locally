@@ -30,14 +30,15 @@ class ConversationsController < ApplicationController
       end
   end
 
-  # def destroy
-  #   @conversation = Conversation.find(params[:id])
-  #   if @conversation.destroy
-  #     redirect_to conversations_paths(@conversation)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def destroy
+    authorize current_user
+    @conversation = Conversation.find(params[:id])
+    if @conversation.destroy
+      redirect_to conversations_path
+    else
+      render :new
+    end
+  end
 
   private
 

@@ -1,7 +1,20 @@
 <div class="chat-wrapper">
   <div class="chat-header d-flex align-items-center">
-    <%= cl_image_tag @conversation.local.photo.key, class:"avatar-big" %>
-    <h4 class="ml-2">Chat with <%= @conversation.local.first_name %> from <%= @conversation.local.city %></h4>
+    <% if @conversation.tourist == current_user %>
+      <% if @conversation.local.photo.attached? %>
+           <%= cl_image_tag @conversation.local.photo.key, class:"avatar-big" %>
+        <% else %>
+            <%= image_tag('user.png', class:"avatar-big") %>
+        <% end %>
+      <h5 class="ml-2"><%= @conversation.local.first_name %> from <%= @conversation.local.city %></h5>
+    <% else %>
+      <% if @conversation.tourist.photo.attached? %>
+        <%= cl_image_tag @conversation.tourist.photo.key, class:"avatar-big" %>
+      <% else %>
+        <%= image_tag('user.png', class:"avatar-big") %>
+      <% end %>
+      <h5 class="ml-2"><%= @conversation.tourist.first_name %> from <%= @conversation.tourist.city %></h5>
+    <% end %>
   </div>
 
   <div id="messages" data-conversation-id="<%= @conversation.id %>">

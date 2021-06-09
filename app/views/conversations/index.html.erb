@@ -2,32 +2,37 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+         <h3 class ="chat-index-title">Locally chats</h3>
          <% @conversations.each do |conversation|  %>
             <div class="card-conversation">
-            <% if conversation.local == current_user %>
-              <%= cl_image_tag conversation.tourist.photo.key %>
-              <p> Chat with <%= conversation.tourist.first_name %>, <%= conversation.tourist.city %></p>
-              <%= link_to conversation_path(conversation), class: 'open-chat-btn' do %>
-                <i class="fas fa-comments"></i>
+              <% if conversation.local == current_user %>
+                <% if conversation.tourist.photo.attached? %>
+                  <%= cl_image_tag conversation.tourist.photo.key %>
+                <% else %>
+                  <%= image_tag('user.png') %>
+                <% end %>
+                <%= link_to conversation_path(conversation), class: 'conversation-link-text' do %>
+                  <p><%= conversation.tourist.first_name %>, <%= conversation.tourist.age %></p>
+                  <p><i class="fas fa-map-pin"></i> <%= conversation.tourist.city %></p>
+                <% end %>
+              <% else %>
+                <% if conversation.local.photo.attached? %>
+                  <%= cl_image_tag conversation.local.photo.key %>
+                <% else %>
+                  <%= image_tag('user.png') %>
+                <% end %>
+                <%= link_to conversation_path(conversation), class: 'conversation-link-text' do %>
+                  <p><%= conversation.local.first_name %>, <%= conversation.local.age %></p>
+                  <p><i class="fas fa-map-pin"></i> <%= conversation.local.city %></p>
+                <% end %>
               <% end %>
-               <%= link_to conversation_path(conversation), method: :delete, class: 'delete-btn-chat' do %>
-              <i class="fas fa-times"></i>
-            <% end %>
-            <% else %>
-              <%= cl_image_tag conversation.local.photo.key %>
-              <p>Chat with <%= conversation.local.first_name %>, <%= conversation.local.city %></p>
-              <%= link_to conversation_path(conversation), class: 'open-chat-btn' do %>
-                <i class="fas fa-comments"></i>
+              <%= link_to conversation_path(conversation), method: :delete, class: 'delete-btn-chat' do %>
+                <i class="fas fa-times"></i>
               <% end %>
-               <%= link_to conversation_path(conversation), method: :delete, class: 'delete-btn-chat' do %>
-              <i class="fas fa-times"></i>
-            <% end %>
-            <% end %>
-          </div>
-         <% end %>
+              <%= link_to "Let's meet up!", "#", class: "btn-meetup" %>
+            </div>
+          <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
