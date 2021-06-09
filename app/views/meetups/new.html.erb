@@ -1,0 +1,17 @@
+<div class="meetups-wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-4">
+        <div class="form-meetups">
+            <h4>Let's explore <%= @conversation.local.city %> with <%= @conversation.local.first_name %></h4>
+            <%= simple_form_for [@conversation, @meetup] do |f| %>
+              <%= f.error_notification %>
+              <%= f.input :location %>
+              <%= f.input :date_time %>
+              <%= f.submit 'Save meetup!', class: "btn btn-primary" %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
