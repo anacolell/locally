@@ -8,6 +8,12 @@ class MeetupsController < ApplicationController
     @meetups = @meetups.order(created_at: :desc)
   end
 
+  def show
+    @user = current_user
+    authorize @user
+    @meetup = Meetup.find(params[:id])
+  end
+
   def new
     @meetup = Meetup.new
     authorize @meetup
@@ -24,6 +30,16 @@ class MeetupsController < ApplicationController
       redirect_to conversation_path(@conversation)
     else
       @meetup = Meetup.new
+      render :new
+    end
+  end
+
+  def destroy
+    authorize current_user
+    @meetup = Meetup.find(params[:id])
+    if @meetup.destroy
+      redirect_to profile_path(current_user)
+    else
       render :new
     end
   end
