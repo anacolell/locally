@@ -6,14 +6,14 @@
         <% else %>
             <%= image_tag('user.png', class:"avatar-big") %>
         <% end %>
-      <h5 class="ml-2"><%= @conversation.local.first_name %> from <%= @conversation.local.city %></h5>
+      <h5 class="ml-2"><%= @conversation.local.first_name %> from <%= @conversation.local.location %></h5>
     <% else %>
       <% if @conversation.tourist.photo.attached? %>
         <%= cl_image_tag @conversation.tourist.photo.key, class:"avatar-big" %>
       <% else %>
         <%= image_tag('user.png', class:"avatar-big") %>
       <% end %>
-      <h5 class="ml-2"><%= @conversation.tourist.first_name %> from <%= @conversation.tourist.city %></h5>
+      <h5 class="ml-2"><%= @conversation.tourist.first_name %> from <%= @conversation.tourist.location %></h5>
     <% end %>
   </div>
 
