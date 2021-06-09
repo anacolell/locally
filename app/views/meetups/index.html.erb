@@ -25,7 +25,7 @@
             <p>Location: <%= meetup.location %></p>
             <p>Date: <%= meetup.date_time %></p>
           </div>
-          <% if conversation.tourist.photo.attached? %>
+          <% if meetup.tourist.photo.attached? %>
            <%= cl_image_tag meetup.tourist.photo.key %>
           <% else %>
             <%= image_tag('user.png') %>
