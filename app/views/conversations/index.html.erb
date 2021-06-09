@@ -1,8 +1,8 @@
 <div class="conversations-wrapper">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-         <h3 class ="chat-index-title">Locally chats</h3>
+      <div class="chat-cards-wrapper col-xs-12 col-sm-4 col-sm-offset-4">
+         <h3 class ="chat-index-title my-4">Locally chats</h3>
          <% @conversations.each do |conversation|  %>
             <div class="card-conversation">
               <% if conversation.local == current_user %>
@@ -29,7 +29,7 @@
               <%= link_to conversation_path(conversation), method: :delete, class: 'delete-btn-chat' do %>
                 <i class="fas fa-times"></i>
               <% end %>
-              <%= link_to "Let's meet up!", "#", class: "btn-meetup" %>
+              <%= link_to "Open chat", conversation_path(conversation), class: "btn-meetup" %>
             </div>
           <% end %>
       </div>
