@@ -20,7 +20,8 @@
                           required:true %>
               <%= f.input :gender, collection: User::GENDER %>
               <%= f.input :location,
-                          required: true %>
+                          placeholder: 'City',
+                          required:true %>
               <%= f.input :country, as: :select,
                           collection: User::COUNTRIES,
                           input_html: { class: "select2", style: "width: 100%" },
