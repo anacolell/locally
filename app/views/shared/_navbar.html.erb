@@ -9,6 +9,7 @@
       <%= link_to conversations_path do %>
       <i class="navbar-link far fa-comments <%= 'nav-active' if params[:controller] == "conversations" && params[:action] == "index" %>"></i>
     <% end %>
+    <li class="style-notif">
     <% if current_user.notifications.where(seen: false).any? %>
       <%= current_user.notifications.count %>
     <% end %>
