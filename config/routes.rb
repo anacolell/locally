@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :messages, only: :create
     resources :meetups, only: [:new, :create]
   end
-  resources :meetups, only: [:edit, :update, :destroy, :show]
+  resources :meetups, only: [:edit, :update, :destroy, :show, :index]
   # resources :recommendations, only: [:new, :create, :index, :destroy] do
   #   resources :bookmarks, only: [:new, :create, :destroy, :index]
   #   resources :reviews, only: [:new, :create, :show, :edit, :update]
