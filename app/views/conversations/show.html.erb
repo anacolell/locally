@@ -14,7 +14,7 @@
       <% else %>
         <%= image_tag('user.png', class:"avatar-big") %>
       <% end %>
-      <h5 class="ml-2"><%= @conversation.tourist.first_name %> from <%= @conversation.tourist.city %></h5>
+      <h5 class="ml-2"><%= @conversation.tourist.first_name %> from <%= @conversation.tourist.location %></h5>
     <% end %>
   </div>
   <div class="chat-header-right">

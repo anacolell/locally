@@ -4,19 +4,19 @@
 }
 
 .contact-green-btn {
- background-color: #c5d8bc;
+  background-color: #A4C097;
   color: white;
   text-decoration: none;
   border-style: none;
-  padding: 8px 24px;
-  border-radius: 12px;
+  border-radius: 20px;
   font-size: 14px;
-  transition: all 0.5s;
-  margin-left: 218px;
-  text: bold;
+  padding: 10px 10px;
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 190px;
 
-  &:hover {
-    background-color: #9fb792;
-    text-decoration: none;
+&:hover {
+  text-decoration: none;
+  color: white;
   }
 }

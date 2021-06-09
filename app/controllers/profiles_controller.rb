@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     authorize @user
-    @recommendations = Recommendation.all
+    @recommendations = Recommendation.where(user_id: @user.id)
     @recommendation_markers = @recommendations.geocoded.map do |recommendation|
       {
         lat: recommendation.latitude,
@@ -33,6 +33,6 @@ class ProfilesController < ApplicationController
   private
 
   def user_strong_params
-    params.require(:user).permit(:first_name, :last_name, :gender, :birthdate, :location, :city, :country, :description, :photo, :languages => [])
+    params.require(:user).permit(:first_name, :last_name, :gender, :birthdate, :location, :country, :description, :photo, :languages => [])
   end
 end

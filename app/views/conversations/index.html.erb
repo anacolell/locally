@@ -13,7 +13,7 @@
                 <% end %>
                 <%= link_to conversation_path(conversation), class: 'conversation-link-text' do %>
                   <p><%= conversation.tourist.first_name %>, <%= conversation.tourist.age %></p>
-                  <p><i class="fas fa-map-pin"></i> <%= conversation.tourist.city %></p>
+                  <p><i class="fas fa-map-pin"></i> <%= conversation.tourist.location %></p>
                 <% end %>
               <% else %>
                 <% if conversation.local.photo.attached? %>
@@ -23,7 +23,7 @@
                 <% end %>
                 <%= link_to conversation_path(conversation), class: 'conversation-link-text' do %>
                   <p><%= conversation.local.first_name %>, <%= conversation.local.age %></p>
-                  <p><i class="fas fa-map-pin"></i> <%= conversation.local.city %></p>
+                  <p><i class="fas fa-map-pin"></i> <%= conversation.local.location %></p>
                 <% end %>
               <% end %>
               <%= link_to conversation_path(conversation), method: :delete, class: 'delete-btn-chat' do %>
