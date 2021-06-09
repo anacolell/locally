@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_07_122014) do
+ActiveRecord::Schema.define(version: 2021_06_09_100758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,6 +91,9 @@ ActiveRecord::Schema.define(version: 2021_06_07_122014) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "conversation_id", null: false
+    t.boolean "seen", default: false
+    t.index ["conversation_id"], name: "index_notifications_on_conversation_id"
     t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
@@ -160,6 +163,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_122014) do
   add_foreign_key "interests", "interest_categories"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
+  add_foreign_key "notifications", "conversations"
   add_foreign_key "notifications", "users"
   add_foreign_key "recommendations", "users"
   add_foreign_key "reviews", "recommendations"
