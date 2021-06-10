@@ -27,6 +27,7 @@ class MeetupsController < ApplicationController
     @meetup.local = @local
     @meetup.tourist = @tourist
     if @meetup.save
+      flash[:alert] = "A meetup was created! You can find the details on your profile"
       redirect_to conversation_path(@conversation)
     else
       @meetup = Meetup.new
