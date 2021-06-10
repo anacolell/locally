@@ -16,15 +16,18 @@ class BookmarksController < ApplicationController
   def create
     @recommendation = Recommendation.find(params[:recommendation_id])
     @user = @recommendation.user
-    @bookmark = Bookmark.new(user_id: current_user.id, recommendation_id: @recommendation.id)
-    authorize @bookmark
-    @bookmark.save
-    flash[:notice] = "A bookmark was created!"
-    redirect_to user_path(@user)
-    # else
-    #   flash[:notice] = "This recommendation could not be bookmarked."
-    # end
-    #redirect_to new_recommendation_path(anchor: "interest-#{interest.id}") if recommendation.save
+    authorize current_user
+    @duplicates = Bookmark.where(user_id: current_user.id, recommendation_id: @recommendation.id)
+    if @duplicates.first.nil? == true
+      @bookmark = Bookmark.new(user_id: current_user.id, recommendation_id: @recommendation.id)
+      authorize @bookmark
+      @bookmark.save
+      flash[:notice] = "A bookmark was created!"
+      redirect_to user_path(@user)
+    else
+      flash[:alert] = "You have already bookmarked that recommendation!"
+      redirect_to user_path(@user)
+    end
   end
 
   def destroy
