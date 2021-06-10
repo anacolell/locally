@@ -16,18 +16,21 @@
   background-color: #fff;
 }
 
-.message-container {
+.message {
   margin: 0 10px;
   margin-top: 10px;
   padding: 10px;
+  width:65%;
+}
+
+.message-user {
+  background-color: $light-gray;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-  width:65%;
-  background-color: $light-gray;
 }
 
-.right {
+.message-right {
   background-color: $peach;
   color:white;
   border-top-left-radius: 12px;
@@ -62,7 +65,7 @@
 .chat-header-text {
   // font-family: 'Handlee', cursive;
   color: green;
-  font-size:18px;
+  font-size:16px;
   border:green 1px solid;
   padding:6px 12px;
   border-radius:15px;

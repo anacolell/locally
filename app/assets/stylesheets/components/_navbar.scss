@@ -23,6 +23,16 @@
   border-radius: 50%;
 }
 
+.login-link-navbar{
+  font-size: 18px;
+  color: darkgrey;
+}
+
+.login-link-navbar:hover{
+  color: darkgrey;
+  text-decoration: none;
+}
+
 .navbar {
   display:flex;
   justify-content:space-between;
