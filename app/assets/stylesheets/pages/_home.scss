@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .wrapper {
-  height: 100%;
+  height: 100vh;
   background:$peach-gradient;
   color:white;
 }
@@ -70,8 +70,4 @@
 
 .logo-title {
   margin:0;
-}
-
-.carousel-wrapper {
-  padding-bottom:60px;
 }
