@@ -1,3 +1,8 @@
+.meetups-form-wrapper {
+  height: 100vh;
+  background-color: $peach;
+}
+
 .meetup-card {
   background-color: $lightpeach;
   margin: 30px 0;
@@ -15,7 +20,7 @@
   background:white;
   padding:10px 20px;
   margin: 50px 0;
-  border-radius: 3px;
+  border-radius: 18px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
