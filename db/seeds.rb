@@ -22,6 +22,7 @@ puts 'Cleaning database...'
 Bookmark.destroy_all
 Recommendation.destroy_all
 Message.destroy_all
+Notification.destroy_all
 Conversation.destroy_all
 Interest.destroy_all
 UserInterest.destroy_all
@@ -226,7 +227,20 @@ a = User.new(
 a.photo.attach(io: file, filename: 'some_name', content_type: '')
 a.save!
 
-Recommendation.create!(name: 'Söderhallarna', location: 'Medborgarplatsen 3', description: 'nice foodhall', pricing: 'free', user_id: a.id)
+file = URI.open('https://images.unsplash.com/photo-1622649440704-7f65fef23d25?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmFyY2Vsb25hJTIwbW91bnQlMjB0aWJpZGFib3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+tibidabo = Recommendation.new(name: 'Mount Tibidabo', location: 'Tibidabo', description: 'Mount Tibidabo is a super nice place for relaxing and hiking.', pricing: 'free', user_id: a.id)
+tibidabo.photo.attach(io: file, filename: 'some_name', content_type: '')
+tibidabo.save!
+
+file = URI.open('https://images.unsplash.com/photo-1557080985-637c8cddf98a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YmFyY2Vsb25hJTIwc2FncmFkYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
+sagrada = Recommendation.new(name: 'Sagrada Familia', location: 'Carrer de Mallorca 401', description: 'Sagrada Familia is probably the most famous sight in Barcelona. It is a super impressive Cathedral with designs by Gaudi.', pricing: '$$', user_id: a.id)
+sagrada.photo.attach(io: file, filename: 'some_name', content_type: '')
+sagrada.save!
+
+file = URI.open('https://images.unsplash.com/photo-1556213262-dff92123f3ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80')
+bunkers = Recommendation.new(name: 'Bunkers', location: 'Carrer de Marià Labèrnia', description: 'The Bunkers viewpoint is just a short walk from the city up a mountain. Once you are there, the view is amazin!', pricing: 'free', user_id: a.id)
+bunkers.photo.attach(io: file, filename: 'some_name', content_type: '')
+bunkers.save!
 
 UserInterest.create!(user_id: a.id, interest_id: tennis.id)
 UserInterest.create!(user_id: a.id, interest_id: volleyball.id)
