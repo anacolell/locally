@@ -1,0 +1,6 @@
+<div class="message message-user" id="message-<%= message.id %>">
+  <%= message.content %>
+  <div class="chat-details">
+    <small><%= message.created_at.localtime.strftime("%a, %H:%M") %></small>
+  </div>
+</div>

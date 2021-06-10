@@ -21,7 +21,9 @@ class MessagesController < ApplicationController
       @notification.save
       ConversationChannel.broadcast_to(
         @conversation,
-        render_to_string(partial: "message", locals: { message: @message })
+        guest: render_to_string(partial: "user_message", locals: { message: @message }),
+        content: render_to_string(partial: "message", locals: { message: @message }),
+        user: @message.user.id
       )
       redirect_to conversation_path(@conversation, anchor: "message-#{@message.id}")
     else
