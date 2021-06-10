@@ -303,6 +303,7 @@ UserInterest.create!(user_id: c.id, interest_id: football.id)
 UserInterest.create!(user_id: c.id, interest_id: pop.id)
 UserInterest.create!(user_id: c.id, interest_id: country.id)
 
+file = URI.open('https://images.unsplash.com/photo-1467881822024-7bec168b479c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80')
 d = User.new(
   email: "d@test.com",
   password: "123456",
@@ -316,6 +317,8 @@ d = User.new(
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
+
+d.photo.attach(io: file, filename: 'some_name', content_type: '')
 d.save!
 
 UserInterest.create!(user_id: d.id, interest_id: volleyball.id)

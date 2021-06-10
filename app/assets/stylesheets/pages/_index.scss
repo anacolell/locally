@@ -29,14 +29,23 @@ h1 {
   justify-content: center;
 }
 
+.locals-wrapper {
+  padding-bottom: 72px;
+}
+
+span#match-text {
+  font-size: 12px;
+}
+
 .local-card {
   margin-top: 16px;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 8px;
   padding: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   position: relative;
   box-shadow: 2px 2px 4px rgba(220, 220, 220, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #profile-button {

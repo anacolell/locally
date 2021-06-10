@@ -14,7 +14,7 @@
       <% else %>
         <%= image_tag('user.png', class:"avatar-big") %>
       <% end %>
-      <h5 class="ml-2"><%= @conversation.tourist.first_name %> from <%= @conversation.tourist.location %></h5>
+      <h5 class="ml-2"><%= @conversation.tourist.first_name %>, <%= @conversation.tourist.location %></h5>
     <% end %>
   </div>
   <div class="chat-header-right">
@@ -22,7 +22,7 @@
   </div>
   </div>
 
-  <div id="messages" data-conversation-id="<%= @conversation.id %>">
+  <div id="messages" data-user="<%= current_user.id %>" data-conversation-id="<%= @conversation.id %>">
     <% @conversation.messages.each do |message| %>
       <%= render 'messages/message', message: message %>
     <% end %>
@@ -37,6 +37,3 @@
     <% end %>
   </div>
 </div>
-
-
-

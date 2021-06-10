@@ -28,7 +28,7 @@
   color: white;
   text-decoration: none;
   border-style: none;
-  padding: 8px 24px;
+  padding: 8px 12px;
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.5s;
@@ -80,7 +80,7 @@
     // border: none;
     border: 1px solid $light-gray;
     color: #000;
-    font-size: 15px;
+    font-size: 12.5px;
   }
   .nav-link.active {
     background-color: $light-gray;
@@ -96,12 +96,13 @@
 
 .recommendation-card {
   height: fit-content;
-  margin: 20px auto;
+  margin: 20px 24px;
   background-color: rgba(240, 240, 240, 0.4);
   border-radius: 16px;
   text-align: center;
   padding-bottom: 8px;
   box-shadow: 2px 2px 4px rgba(230, 230, 230, 0.5);
+  object-fit: cover;
 }
 
 .recommendation-container {
@@ -117,6 +118,14 @@
   }
 }
 
+.fas.fa-bookmark {
+  font-size: 16px;
+  color: rgba(110, 110, 110, 0.8);
+
+  &:hover {
+    color: $peach;
+  }
+}
 #recommendation-name {
   margin: 8px 0px;
   font-weight: bolder;
@@ -154,7 +163,14 @@ hr {
   background-color: white;
 }
 
-.logout {
-  color:gray;
-  text-align:right;
+.logout-div {
+  display:flex;
+  justify-content: flex-end;
 }
+
+.settings-icon {
+  text-align:right;
+  color:grey;
+}
+
+
