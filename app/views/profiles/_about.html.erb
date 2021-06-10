@@ -6,8 +6,8 @@
       <% else %>
       <% @user.languages.reject {|language| language == ""}.each_with_index do |language, index| %>
         <% if index < @user.languages.reject {|language| language == ""}.length - 1 %>
-          <%= language %> &
-        <% else %>
+          <%= language %>
+        <% else %>  &
           <%= language %>
         <% end %>
       <% end %>
