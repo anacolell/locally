@@ -9,7 +9,11 @@
       <%= link_to conversations_path do %>
       <i class="navbar-link far fa-comments <%= 'nav-active' if params[:controller] == "conversations" && params[:action] == "index" %>"></i>
     <% end %>
-    </li>
+    <% if current_user.notifications.where(seen: false).any? %>
+      <li class="style-notif">
+      <%= current_user.notifications.where(seen: false).count %>
+      </li>
+    <% end %>
     <li>
       <%= link_to search_path do %>
       <i class="navbar-link fas fa-globe-americas <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
