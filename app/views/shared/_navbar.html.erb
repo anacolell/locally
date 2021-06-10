@@ -5,15 +5,16 @@
         <i class="navbar-link fas fa-home <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "home" %>"></i>
       <% end %>
     </li>
-    <li>
+    <li style="position: relative;">
       <%= link_to conversations_path do %>
       <i class="navbar-link far fa-comments <%= 'nav-active' if params[:controller] == "conversations" && params[:action] == "index" %>"></i>
-    <% end %>
-    <% if current_user.notifications.where(seen: false).any? %>
-      <li class="style-notif">
-      <%= current_user.notifications.where(seen: false).count %>
-      </li>
-    <% end %>
+      <% if current_user.notifications.where(seen: false).any? %>
+        <div class="style-notif">
+        <%= current_user.notifications.where(seen: false).count %>
+        </div>
+        <% end %>
+      <% end %>
+    </li>
     <li>
       <%= link_to search_path do %>
       <i class="navbar-link fas fa-globe-americas <%= 'nav-active' if params[:controller] == "pages" && params[:action] == "search" %>"></i>
@@ -23,7 +24,7 @@
       <%= link_to "#", class: "nav-link" do %>
         <i class="navbar-link fas fa-bell"></i>
       <% end %>
-      </li>
+    </li>
     <li>
       <%= link_to profile_path(current_user.id) do %>
         <i class="navbar-link far fa-user <%= 'nav-active' if params[:controller] == "profiles" && params[:action] == "show" %>"></i>
