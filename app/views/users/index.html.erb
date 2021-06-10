@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="col-7">
-      <h1>Find a <strong>local</strong></h1>
-    </div>
-    <div class="col-5">
+<!--     <div class="col-7">
+ --> <h1>Find a <strong>local</strong></h1>
+<!--     </div>
+ --><!--     <div class="col-5">
       <p id="percentage-description">* this is the match of your interests with the locals' interests</p>
-    </div>
+    </div> -->
   </div>
 
   <% if params[:commit] == "Let's go!" %>
@@ -29,8 +29,9 @@
             <hr>
             <p>Let's meet for:</p>
             <% local.interests.each_with_index do |interest, index| %>
-              <%= "#{interest.name}, "%>
-              <% if index == local.interests.size - 1 %>
+              <% if index < local.interests.size - 1 %>
+                <%= "#{interest.name}, "%>
+              <% elsif index == local.interests.size - 1 %>
                 <%= "#{interest.name}"%>
               <% end %>
             <% end %>
@@ -40,7 +41,7 @@
               <%= link_to "Go to profile", user_path(local), class: 'profile-link' %>
             </div>
             <div id="match-button">
-              <%= "#{local.instance_variable_get("@ranking")}%*" %>
+              <%= "#{local.instance_variable_get("@ranking")}%" %>
             </div>
           </div>
         </div>
@@ -77,7 +78,7 @@
               <%= link_to "Go to profile", user_path(@random_local), class: 'profile-link' %>
             </div>
             <div id="match-button">
-              <%= "#{@random_local.instance_variable_get("@ranking")}%*" %>
+              <%= "#{@random_local.instance_variable_get("@ranking")}%" %>
             </div>
           </div>
         </div>
