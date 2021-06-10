@@ -9,7 +9,9 @@
             <p>Date: <%= meetup.date_time %></p>
           </div>
             <% if meetup.local.photo.attached? %>
-              <%= cl_image_tag meetup.local.photo.key %>
+              <%= link_to user_path(meetup.local) do %>
+                <%= cl_image_tag meetup.local.photo.key %>
+              <% end %>
             <% else %>
               <%= image_tag('user.png') %>
             <% end %>
@@ -27,7 +29,9 @@
             <p>Time: <%= meetup.time %></p>
           </div>
           <% if meetup.tourist.photo.attached? %>
-           <%= cl_image_tag meetup.tourist.photo.key %>
+            <%= link_to user_path(meetup.tourist) do %>
+              <%= cl_image_tag meetup.tourist.photo.key %>
+            <% end %>
           <% else %>
             <%= image_tag('user.png') %>
           <% end %>

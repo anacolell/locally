@@ -7,7 +7,9 @@
             <div class="card-conversation">
               <% if conversation.local == current_user %>
                 <% if conversation.tourist.photo.attached? %>
-                  <%= cl_image_tag conversation.tourist.photo.key %>
+                  <%= link_to user_path(conversation.tourist) do %>
+                    <%= cl_image_tag conversation.tourist.photo.key %>
+                  <% end %>
                 <% else %>
                   <%= image_tag('user.png') %>
                 <% end %>
@@ -17,7 +19,9 @@
                 <% end %>
               <% else %>
                 <% if conversation.local.photo.attached? %>
-                  <%= cl_image_tag conversation.local.photo.key %>
+                  <%= link_to user_path(conversation.local) do %>
+                    <%= cl_image_tag conversation.local.photo.key %>
+                  <% end %>
                 <% else %>
                   <%= image_tag('user.png') %>
                 <% end %>
@@ -36,3 +40,4 @@
     </div>
   </div>
 </div>
+
