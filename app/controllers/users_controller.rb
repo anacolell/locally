@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     @users = policy_scope(User)
     if params[:commit] == "Let's go!"
-      flash[:notice] = "Good news, there are locals in the city that you are visiting! The percentages show you how well your interests match with the locals' interests. Happy exploring!"
+      # flash[:notice] = "Good news, there are locals in the city that you are visiting! The percentages show you how well your interests match with the locals' interests. Happy exploring!"
       @locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
       @locals_location.each do |local|
         @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
