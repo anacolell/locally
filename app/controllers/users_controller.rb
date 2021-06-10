@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :current_user_count
   before_action :set_locals
 
-
   def index
     @users = policy_scope(User)
     if params[:commit] == "Let's go!"
@@ -11,7 +10,6 @@ class UsersController < ApplicationController
         @matching_number = (calculate_similarity_ranking(local) * 100).round(0)
         local.instance_variable_set("@ranking", @matching_number)
       end
-
     else
       @random_locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
       @random_local = @random_locals_location.sample
