@@ -8,24 +8,17 @@
           <% if recommendation.photo.attached?  %>
             <%= cl_image_tag recommendation.photo.key, crop: :fill, class:"foto-recommendation" %>
           <% end %>
-            <div id="recommendation-name"><%= recommendation.name %></div>
-            <div id="recommendation-description"><%= recommendation.description %></div>
-            <hr>
-            <div class="row justify-content-center">
-              <div class="col col-xs-6">
-                <strong id="recommendation-pricing"><%= recommendation.pricing %></strong>
-              </div>
-              <div class="col col-xs-4 recommendation-bookmark">
-                <%= link_to recommendation_bookmarks_path(recommendation), method: :post do %>
-                  <i class="fas fa-bookmark"></i>
-                <% end %>
-              </div>
-              <div class="col col-xs-6 delete-button">
-                <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fas fa-trash"></i>
-                <% end %>
-              </div>
+          <div id="recommendation-name"><%= recommendation.name %></div>
+          <div id="recommendation-description"><%= recommendation.description %></div>
+          <hr>
+          <div class="row justify-content-center">
+            <div class="col col-xs-6 recommendation-pricing">Pricing: <%= recommendation.pricing %></div>
+            <div class="recommendation-bookmark">
+              <%= link_to recommendation_bookmarks_path(recommendation), method: :post do %>
+                <i class="fas fa-bookmark"></i>
+              <% end %>
             </div>
+          </div>
         </div>
       <% end %>
     <% else %>

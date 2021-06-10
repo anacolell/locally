@@ -20,9 +20,9 @@
 <!--               <div class="col col-xs-4 recommendation-bookmark">
                 <i class="fas fa-bookmark"></i>
               </div> -->
-              <div class="col col-xs-6 delete-button">
+              <div class="delete-button">
                 <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fas fa-trash"></i>
+                  <i class="fas fa-times"></i>
                 <% end %>
               </div>
             </div>
