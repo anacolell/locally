@@ -11,6 +11,7 @@ class UserInterestsController < ApplicationController
     interest = Interest.find(params[:interest].to_i)
     user_interest = UserInterest.new(user: current_user, interest: interest)
     redirect_to new_user_interest_path
+  end
 
   def destroy
     authorize current_user
