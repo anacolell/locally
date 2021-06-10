@@ -8,7 +8,7 @@
           <% else %>
             <%= link_to "Contact me!", user_conversations_path(@user), method: :post, class:'contact-green-btn' %>
           <% end %>
-            <div class="form-show-profile">
+            <div class="form-show-user">
               <div class="profile-header">
             <% if @user.photo.attached? %>
               <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class:"foto-profile" %>

@@ -28,7 +28,7 @@
   color: white;
   text-decoration: none;
   border-style: none;
-  padding: 8px 24px;
+  padding: 8px 12px;
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.5s;
@@ -80,7 +80,7 @@
     // border: none;
     border: 1px solid $light-gray;
     color: #000;
-    font-size: 15px;
+    font-size: 12.5px;
   }
   .nav-link.active {
     background-color: $light-gray;
@@ -158,3 +158,5 @@ hr {
   color:gray;
   text-align:right;
 }
+
+
