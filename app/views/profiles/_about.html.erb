@@ -1,14 +1,18 @@
 <div class="show-card">
   <h5 class="my-4 profile-subtitle">Contact me in:</h5>
-    <% if @user.languages %>
-      <% @user.languages.each do |language| %>
-        <% if language == @user.languages.last  %>
-          & <%= language %>
-        <% else  %>
+    <% if @user.languages.reject {|language| language == ""} %>
+      <% if @user.languages.reject {|language| language == ""}.length == 1 %>
+        <%= @user.languages.reject {|language| language == ""}.last %>
+      <% else %>
+      <% @user.languages.reject {|language| language == ""}.each_with_index do |language, index| %>
+        <% if index < @user.languages.reject {|language| language == ""}.length - 1 %>
+          <%= language %> &
+        <% else %>
           <%= language %>
         <% end %>
-        <% end %>
+      <% end %>
     <% end %>
+  <% end %>
 </div>
 
 <div class="show-card">
