@@ -163,9 +163,14 @@ hr {
   background-color: white;
 }
 
-.logout {
-  color:gray;
+.logout-div {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.settings-icon {
   text-align:right;
+  color:grey;
 }
 
 
