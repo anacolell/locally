@@ -96,12 +96,13 @@
 
 .recommendation-card {
   height: fit-content;
-  margin: 20px auto;
+  margin: 20px 24px;
   background-color: rgba(240, 240, 240, 0.4);
   border-radius: 16px;
   text-align: center;
   padding-bottom: 8px;
   box-shadow: 2px 2px 4px rgba(230, 230, 230, 0.5);
+  object-fit: cover;
 }
 
 .recommendation-container {
@@ -117,6 +118,14 @@
   }
 }
 
+.fas.fa-bookmark {
+  font-size: 16px;
+  color: rgba(110, 110, 110, 0.8);
+
+  &:hover {
+    color: $peach;
+  }
+}
 #recommendation-name {
   margin: 8px 0px;
   font-weight: bolder;
