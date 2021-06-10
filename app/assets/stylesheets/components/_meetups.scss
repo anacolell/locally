@@ -46,7 +46,7 @@
 
 .card-meetups img {
   height: 100%;
-  width: 120px;
+  width: 100px;
   object-fit: cover;
 }
 
@@ -56,4 +56,19 @@
   right:2px;
   color: $green;
   font-size:10px;
+}
+.card-meetup-text {
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.card-meetup-text p {
+  font-size:16px;
+  padding:0 5px;
+  margin:0;
+}
+
+.meetup-name {
+  font-weight: bolder;
 }

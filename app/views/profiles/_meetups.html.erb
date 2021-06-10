@@ -26,7 +26,6 @@
             <p>Meetup with: <%= meetup.tourist.first_name %></p>
             <p>Location: <%= meetup.location %></p>
             <p>Date: <%= meetup.date_time %></p>
-            <p>Time: <%= meetup.time %></p>
           </div>
           <% if meetup.tourist.photo.attached? %>
             <%= link_to user_path(meetup.tourist) do %>
