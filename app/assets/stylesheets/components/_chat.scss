@@ -12,6 +12,8 @@
 #messages {
   display:flex;
   flex-direction: column;
+  padding-bottom: 150px;
+  background-color: #fff;
 }
 
 .message-container {
@@ -58,9 +60,9 @@
 }
 
 .chat-header-text {
-  font-family: 'Handlee', cursive;
+  // font-family: 'Handlee', cursive;
   color: green;
-  font-size:22px;
+  font-size:18px;
   border:green 1px solid;
   padding:6px 12px;
   border-radius:15px;
