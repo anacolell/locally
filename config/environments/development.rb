@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.hosts << '483539661673.ngrok.io'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -13,8 +14,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
-
+  # config.hosts << /[a-z0-9]+\.ngrok\.io/
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
