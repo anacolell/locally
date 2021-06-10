@@ -251,6 +251,10 @@ UserInterest.create!(user_id: a.id, interest_id: bars.id)
 UserInterest.create!(user_id: a.id, interest_id: running.id)
 UserInterest.create!(user_id: a.id, interest_id: indie.id)
 UserInterest.create!(user_id: a.id, interest_id: techno.id)
+UserInterest.create!(user_id: a.id, interest_id: vegetarian.id)
+UserInterest.create!(user_id: a.id, interest_id: pubs.id)
+UserInterest.create!(user_id: a.id, interest_id: international.id)
+UserInterest.create!(user_id: a.id, interest_id: punk.id)
 
 file = URI.open('https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 b = User.new(
@@ -276,6 +280,10 @@ UserInterest.create!(user_id: b.id, interest_id: dancing.id)
 UserInterest.create!(user_id: b.id, interest_id: gym.id)
 UserInterest.create!(user_id: b.id, interest_id: electronic.id)
 UserInterest.create!(user_id: b.id, interest_id: alternative.id)
+UserInterest.create!(user_id: b.id, interest_id: rock.id)
+UserInterest.create!(user_id: b.id, interest_id: classical.id)
+UserInterest.create!(user_id: b.id, interest_id: badminton.id)
+UserInterest.create!(user_id: b.id, interest_id: volleyball.id)
 
 file = URI.open('https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzV8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 c = User.new(
@@ -302,6 +310,8 @@ UserInterest.create!(user_id: c.id, interest_id: tennis.id)
 UserInterest.create!(user_id: c.id, interest_id: football.id)
 UserInterest.create!(user_id: c.id, interest_id: pop.id)
 UserInterest.create!(user_id: c.id, interest_id: country.id)
+UserInterest.create!(user_id: c.id, interest_id: gym.id)
+UserInterest.create!(user_id: c.id, interest_id: climbing.id)
 
 file = URI.open('https://images.unsplash.com/photo-1467881822024-7bec168b479c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80')
 d = User.new(
@@ -329,6 +339,8 @@ UserInterest.create!(user_id: d.id, interest_id: tennis.id)
 UserInterest.create!(user_id: d.id, interest_id: football.id)
 UserInterest.create!(user_id: d.id, interest_id: electronic.id)
 UserInterest.create!(user_id: d.id, interest_id: techno.id)
+UserInterest.create!(user_id: d.id, interest_id: pubs.id)
+UserInterest.create!(user_id: d.id, interest_id: jazz.id)
 
 file = URI.open('https://images.unsplash.com/photo-1463453091185-61582044d556?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHBlb3BsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 e = User.new(
@@ -355,6 +367,8 @@ UserInterest.create!(user_id: e.id, interest_id: coffee.id)
 UserInterest.create!(user_id: e.id, interest_id: restaurants.id)
 UserInterest.create!(user_id: e.id, interest_id: jazz.id)
 UserInterest.create!(user_id: e.id, interest_id: techno.id)
+UserInterest.create!(user_id: e.id, interest_id: pop.id)
+UserInterest.create!(user_id: e.id, interest_id: hockey.id)
 
 file = URI.open('https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA0fHxwZW9wbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 f = User.new(
@@ -379,6 +393,9 @@ UserInterest.create!(user_id: f.id, interest_id: dancing.id)
 UserInterest.create!(user_id: f.id, interest_id: tennis.id)
 UserInterest.create!(user_id: f.id, interest_id: volleyball.id)
 UserInterest.create!(user_id: f.id, interest_id: indie.id)
+UserInterest.create!(user_id: f.id, interest_id: football.id)
+UserInterest.create!(user_id: f.id, interest_id: coffee.id)
+UserInterest.create!(user_id: e.id, interest_id: hockey.id)
 
 file = URI.open('https://images.unsplash.com/photo-1508908324153-d1a219719814?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1lbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 g = User.new(
@@ -404,6 +421,8 @@ UserInterest.create!(user_id: g.id, interest_id: tennis.id)
 UserInterest.create!(user_id: g.id, interest_id: volleyball.id)
 UserInterest.create!(user_id: g.id, interest_id: indie.id)
 UserInterest.create!(user_id: g.id, interest_id: techno.id)
+UserInterest.create!(user_id: g.id, interest_id: crossfit.id)
+UserInterest.create!(user_id: g.id, interest_id: baseball.id)
 
 puts "all users created"
 
