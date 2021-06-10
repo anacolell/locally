@@ -28,7 +28,8 @@
             <p><%= local.location %></p>
             <hr>
             <p>Let's meet for:</p>
-            <% local.interests.each_with_index do |interest, index| %>
+            <% interest_array = local.interests.first(5) %>
+            <% interest_array.each_with_index do |interest, index| %>
               <%= "#{interest.name}, "%>
               <% if index == local.interests.size - 1 %>
                 <%= "#{interest.name}"%>
