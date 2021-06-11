@@ -122,9 +122,9 @@
   right: 16px;
 }
 
-.fas.fa-trash {
-  font-size: 18px;
-  color: rgba(252, 140, 88, 0.6);
+.fa-times.reco {
+  font-size: 20px;
+  color: rgba(100, 100, 100, 0.8);
 
 
   &:hover {
@@ -134,12 +134,13 @@
 
 .fas.fa-bookmark {
   font-size: 20px;
-  color: rgba(252, 140, 88, 0.6);
+  color: rgba(100, 100, 100, 0.4);
 
   &:hover {
     color: rgba(252, 140, 88, 1);
   }
 }
+
 #recommendation-name {
   margin: 8px 0px;
   font-weight: bolder;
