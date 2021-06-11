@@ -22,7 +22,7 @@ class BookmarksController < ApplicationController
       @bookmark = Bookmark.new(user_id: current_user.id, recommendation_id: @recommendation.id)
       authorize @bookmark
       @bookmark.save
-      flash[:notice] = "A bookmark was created!"
+      flash[:alert] = "A bookmark was created!"
       redirect_to user_path(@user)
     else
       flash[:alert] = "You have already bookmarked that recommendation!"
