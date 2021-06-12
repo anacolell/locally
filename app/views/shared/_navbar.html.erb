@@ -31,8 +31,13 @@
       <% end %>
     </li>
     <% else %>
-    <li class="nav-item">
-      <%= link_to "Login", new_user_session_path, class: "login-link-navbar" %>
-    </li>
+    <div class="d-flex">
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "login-link-navbar" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign up", new_user_registration_path, class: "login-link-navbar" %>
+      </li>
+    </div>
   <% end %>
 </ul>
