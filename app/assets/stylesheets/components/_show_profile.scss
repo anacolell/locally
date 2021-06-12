@@ -1,21 +1,20 @@
 .show-profile-wrapper {
-  height:100%;
-  background:$peach-gradient;
+  height: 100%;
+  background: $peach-gradient;
 }
 
 .form-show-profile {
-  background:white;
-  // padding:10px 20px;
+  background: white;
   margin: 20px 0;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  margin-bottom:100px;
+  margin-bottom: 100px;
   h2 {
     font-size: 22px;
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 20px;
-    margin-bottom:30px;
-    text-align:center;
+    margin-bottom: 30px;
+    text-align: center;
   }
   .btn {
     width: 100%;
@@ -36,8 +35,8 @@
 
 .profile-green-btn:hover,
 .profile-green-btn:focus {
-  color:white;
-  text-decoration:none;
+  color: white;
+  text-decoration: none;
 }
 
 .profile-interest-btn {
@@ -53,9 +52,9 @@
 
 .profile-interest-btn:hover,
 .profile-interest-btn:focus {
-  color:white;
+  color: white;
   background-color: #A4C097;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 .show-buttons {
@@ -64,20 +63,19 @@
 }
 
 .profile-header {
-  text-align:center;
-  margin-bottom:40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .tab-wrapper {
   background-color: $light-gray;
-  padding:10px;
-  margin-bottom:15px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .nav-tabs {
   .nav-link {
     background-color: #fff;
-    // border: none;
     border: 1px solid $light-gray;
     color: #000;
     font-size: 12.5px;
@@ -90,8 +88,8 @@
 .show-card {
   background-color: #fff;
   margin: 30px 0;
-  padding:10px;
-  padding-bottom:30px;
+  padding: 10px;
+  padding-bottom: 30px;
 }
 
 .recommendation-card {
@@ -103,7 +101,7 @@
   padding-bottom: 8px;
   box-shadow: 2px 2px 4px rgba(230, 230, 230, 0.5);
   object-fit: cover;
-  position: relative;;
+  position: relative;
 }
 
 .recommendation-container {
@@ -125,7 +123,6 @@
 .fa-times.reco {
   font-size: 20px;
   color: rgba(100, 100, 100, 0.8);
-
 
   &:hover {
     color: rgba(252, 140, 88, 1);
@@ -158,14 +155,6 @@
   margin-bottom: 8px;
 }
 
-
-// .recommendation-bookmark {
-//   color: rgba(110, 110, 110, 0.8);
-//   &:hover {
-//     color: $peach;
-//   }
-// }
-
 .recommendation-pricing {
   color: rgba(100, 100, 100, 0.8);
   font-size: 14px;
@@ -177,11 +166,11 @@ hr {
 }
 
 .logout-div {
-  display:flex;
+  display: flex;
   justify-content: flex-end;
 }
 
 .settings-icon {
-  text-align:right;
-  color:grey;
+  text-align: right;
+  color: grey;
 }

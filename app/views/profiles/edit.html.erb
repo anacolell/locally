@@ -26,7 +26,6 @@
                           collection: User::COUNTRIES,
                           input_html: { class: "select2", style: "width: 100%" },
                           required: true %>
-              <%#= f.select :languages %>
               <%= f.input :languages, as: :select, collection: User::LANGUAGES, input_html: { class: "select2", multiple: true, style: "width: 100%" } %>
               <%= f.input :birthdate,
                           as: :date,

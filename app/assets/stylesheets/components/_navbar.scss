@@ -14,12 +14,12 @@
 .navbar-link {
   font-size: 20px;
   color: darkgrey;
-  padding:8px;
+  padding: 8px;
 }
 
 .navbar-link:hover,
 .nav-active {
-  background-color:#fadbbc;
+  background-color: #fadbbc;
   border-radius: 50%;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .navbar {
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin-bottom: 0;
   background-color: #fff;
@@ -45,9 +45,7 @@ a {
   .style-notif {
     color: white;
   }
-
 }
-
 
 .style-notif {
   background-color: #ff0000;

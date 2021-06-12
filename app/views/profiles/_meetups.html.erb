@@ -8,15 +8,15 @@
             <p>Location: <%= meetup.location %></p>
             <p>Date: <%= meetup.date_time %></p>
           </div>
-            <% if meetup.local.photo.attached? %>
-              <%= link_to user_path(meetup.local) do %>
-                <%= cl_image_tag meetup.local.photo.key %>
-              <% end %>
-            <% else %>
-              <%= image_tag('user.png') %>
+          <% if meetup.local.photo.attached? %>
+            <%= link_to user_path(meetup.local) do %>
+              <%= cl_image_tag meetup.local.photo.key %>
             <% end %>
-              <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
-          <i class="fas fa-times"></i>
+          <% else %>
+            <%= image_tag('user.png') %>
+          <% end %>
+          <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
+            <i class="fas fa-times"></i>
           <% end %>
         </div>
       <% end %>
@@ -35,10 +35,10 @@
             <%= image_tag('user.png') %>
           <% end %>
           <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
-          <i class="fas fa-times"></i>
+            <i class="fas fa-times"></i>
           <% end %>
         </div>
-    <% end %>
+      <% end %>
     <% else %>
       <p class="mt-4 text-white">You don't have any meetups planned.</p>
     <% end %>

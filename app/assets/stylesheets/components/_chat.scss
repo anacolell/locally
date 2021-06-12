@@ -1,16 +1,16 @@
 .chat-wrapper {
   background: #fff;
   width: 100%;
-  height:100vh;
+  height: 100vh;
 }
 
 .chat-header {
   background-color: $light-gray;
-  padding:10px;
+  padding: 10px;
 }
 
 #messages {
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding-bottom: 150px;
   background-color: #fff;
@@ -20,7 +20,7 @@
   margin: 0 10px;
   margin-top: 10px;
   padding: 10px;
-  width:65%;
+  width: 65%;
 }
 
 .message-user {
@@ -32,7 +32,7 @@
 
 .message-right {
   background-color: $peach;
-  color:white;
+  color: white;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -41,7 +41,7 @@
 
 .chat-details {
   text-align: right;
-  font-size:12px;
+  font-size: 12px;
 }
 
 .chat-input {
@@ -53,8 +53,8 @@
 .chat-btn {
   color: #fff;
   background: $peach;
-  border:none;
-  border-radius:5px;
+  border: none;
+  border-radius: 5px;
 }
 
 .chat-icon {
@@ -63,15 +63,14 @@
 }
 
 .chat-header-text {
-  // font-family: 'Handlee', cursive;
   color: rgb(118, 132, 124);
-  font-size:16px;
+  font-size: 16px;
   border:rgb(118, 132, 124) 1px solid;
-  padding:6px 12px;
-  border-radius:15px;
+  padding: 6px 12px;
+  border-radius: 15px;
 }
 
 .chat-header-text:hover {
-  text-decoration:none;
+  text-decoration: none;
   color: rgb(118, 132, 124);
 }

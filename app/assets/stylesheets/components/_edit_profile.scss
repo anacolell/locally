@@ -1,30 +1,30 @@
 .edit-profile-wrapper {
-  height:100%;
-  background:$peach-gradient;
+  height: 100%;
+  background: $peach-gradient;
 }
 
 .form-edit-profile {
-  background:white;
-  padding:10px 20px;
+  background: white;
+  padding: 10px 20px;
   margin: 50px 0;
   margin-bottom: 100px;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   h2 {
     font-size: 22px;
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 20px;
-    margin-bottom:30px;
-    text-align:center;
+    margin-bottom: 30px;
+    text-align: center;
   }
   .btn-update {
     width: 100%;
     margin-bottom: 20px;
-    color:white;
+    color: white;
     background-color: $peach;
   }
 }
 
 .foto-edit-profile {
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }

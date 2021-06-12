@@ -1,21 +1,21 @@
 .recommendations-wrapper {
-  height:100%;
-  background:$lightpeach2;
+  height: 100%;
+  background: $lightpeach2;
 }
 
 .form-recommendations {
-  background:white;
-  padding:16px 20px;
+  background: white;
+  padding: 16px 20px;
   padding-bottom: 32px;
   margin: 50px 0;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   h2 {
     font-size: 22px;
-    font-weight:bold;
+    font-weight: bold;
     margin-top: 20px;
-    margin-bottom:30px;
-    text-align:center;
+    margin-bottom: 30px;
+    text-align: center;
   }
   .btn {
     width: 100%;
@@ -32,20 +32,15 @@ input.recommendations-green-btn {
   border-radius: 4px;
   font-size: 16px;
   transition: all 0.5s;
-  text-align:center;
+  text-align: center;
   margin-top: 16px;
   width: 80%;
   margin-left: 32px;
 }
 
-// .recommendations-btn {
-//   text-align:center;
-//   margin-top:40px;
-// }
-
 .recommendations-green-btn:hover {
-  color:white;
-  text-decoration:none;
+  color: white;
+  text-decoration: none;
 }
 
 label.text.required {
@@ -90,5 +85,3 @@ textarea#recommendation_description {
 input#recommendation_photo {
   background-color: white;
 }
-
-

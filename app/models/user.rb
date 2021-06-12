@@ -12,12 +12,14 @@ class User < ApplicationRecord
   has_many :interests, through: :user_interests
   has_many :reviews
   has_many :bookmarks
-  has_many :recommendations #, through: :bookmarks
+  has_many :recommendations
   has_many :notifications
   has_many :messages
   has_many :conversations
   has_many :meetups_as_local, class_name: 'Meetup', foreign_key: 'local_id'
   has_many :meetups_as_tourist, class_name: 'Meetup', foreign_key: 'tourist_id'
+  validates :last_name, presence: true
+  validates :first_name, presence: true
   has_one_attached :photo
 
   def age
@@ -25,11 +27,4 @@ class User < ApplicationRecord
       (Time.now.to_s(:number).to_i - self.birthdate.to_time.to_s(:number).to_i) / 10e9.to_i
     end
   end
-
-  # validates :description, presence: true, length: { maximum: 500 }
-  # validates :gender, presence: true, inclusion: { in: GENDER }
-  # validates :location, presence: true
-  # validates :birthdate, presence: true
-  # validates :profile_type, presence: true, inclusion: { in: PROFILE_TYPE}
 end
-

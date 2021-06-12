@@ -17,9 +17,6 @@
               <div class="col col-xs-6">
                 <strong id="recommendation-pricing"><%= recommendation.pricing %></strong>
               </div>
-<!--               <div class="col col-xs-4 recommendation-bookmark">
-                <i class="fas fa-bookmark"></i>
-              </div> -->
               <div class="delete-button">
                 <%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" } do %>
                   <i class="fas fa-times reco"></i>
@@ -32,4 +29,3 @@
       <p>You haven't added any bookmarks yet!<p>
     <% end %>
 </div>
-

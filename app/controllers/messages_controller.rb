@@ -1,10 +1,6 @@
 class MessagesController < ApplicationController
   def create
-    # @user = current_user
-    # authorize @user
-
     @conversation = Conversation.find(params[:conversation_id])
-    # @conversation.tourist = current_user
     @message = Message.new(message_params)
     @message.conversation = @conversation
     @message.user = current_user

@@ -9,55 +9,54 @@
             <% end %>
           </div>
           <h1 class="text-center my-4">My profile</h1>
-           <div class="profile-header">
-              <% if @user.photo.attached? %>
-                <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class:"foto-profile" %>
-              <% else %>
-                <%= image_tag('user.png', height: 200, width: 200, crop: :fill, class:"foto-profile") %>
-              <% end %>
-              <div>
-                <h4 class="mt-4 username-profile"><%= @user.first_name %> <%= @user.last_name %>, <%= @user.age %></h4>
-                <h5 class="mb-4">A local in <i class="fas fa-map-pin"></i> <%= @user.location %>, <%= @user.country %></h5>
-                <p class="profile-description-text"><%= @user.description %></p>
-              </div>
+          <div class="profile-header">
+            <% if @user.photo.attached? %>
+              <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class:"foto-profile" %>
+            <% else %>
+              <%= image_tag('user.png', height: 200, width: 200, crop: :fill, class:"foto-profile") %>
+            <% end %>
+            <div>
+              <h4 class="mt-4 username-profile"><%= @user.first_name %> <%= @user.last_name %>, <%= @user.age %></h4>
+              <h5 class="mb-4">A local in <i class="fas fa-map-pin"></i> <%= @user.location %>, <%= @user.country %></h5>
+              <p class="profile-description-text"><%= @user.description %></p>
             </div>
+          </div>
 
             <!-- tabs -->
 
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Recommendations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="bookmark-tab" data-toggle="tab" href="#bookmark" role="tab" aria-controls="profile" aria-selected="false">Bookmarks</a>
-              </li>
-            </ul>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Recommendations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="bookmark-tab" data-toggle="tab" href="#bookmark" role="tab" aria-controls="profile" aria-selected="false">Bookmarks</a>
+            </li>
+          </ul>
 
               <!-- tab content -->
-            <div class= "tab-wrapper">
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <%= render 'about' %>
-                </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                  <%= render 'recommendations' %>
-                  <div id="map"
-                     style="width: 100%; height: 600px;"
-                     data-markers="<%= @recommendation_markers.to_json %>"
-                     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="bookmark" role="tabpanel" aria-labelledby="profile-tab">
-                  <%= render 'bookmarks' %>
+          <div class= "tab-wrapper">
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <%= render 'about' %>
+              </div>
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <%= render 'recommendations' %>
+                <div id="map"
+                   style="width: 100%; height: 600px;"
+                   data-markers="<%= @recommendation_markers.to_json %>"
+                   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
                 </div>
               </div>
+              <div class="tab-pane fade" id="bookmark" role="tabpanel" aria-labelledby="profile-tab">
+                <%= render 'bookmarks' %>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
