@@ -2,18 +2,6 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# User.create!(name: 'Local', age: '24', email:'test1@mail.com', password: '123456', username: 'lisa12', description: 'blaaaaaaa', gender: 'female', location: 'berlin', birthdate: Date.new, profile_type: 'individual')
-# User.create!(name: 'Tourist', age: '28', email:'test2@mail.com', password: '123456', username: 'emma12', description: 'helloooooo', gender: 'female', location: 'stockholm', birthdate: Date.new, profile_type: 'individual')
-# Meetup.create!(location: 'Söderhallarna', date_time: Date.new, local_id: User.first.id, tourist_id: User.last.id)
-
-# Interest.create(name: 'Tennis')
-# interests.create(name: 'Volleyball')
-# interests.create(name: 'Swimming')
-# interests.create(name: 'Badminton')
-# interests.create(name: 'Food')
 
 require 'faker'
 require 'open-uri'
@@ -32,12 +20,7 @@ User.destroy_all
 puts 'Creating seeds...'
 
 category = InterestCategory.create(name: "Going Out")
-# Interest.create(name: "Bars", interest_category_id: category.id)
-# Interest.create(name: "Clubs", interest_category_id: category.id)
-# Interest.create(name: "Going to the park", interest_category_id: category.id)
-# Interest.create(name: "Dancing", interest_category_id: category.id)
-# Interest.create(name: "Pubs", interest_category_id: category.id)
-# Interest.create(name: "Speakeasies", interest_category_id: category.id)
+
 Interest.create(name: "Outdoor party", interest_category_id: category.id)
 Interest.create(name: "BBQ", interest_category_id: category.id)
 Interest.create(name: "Cocktails", interest_category_id: category.id)
@@ -53,14 +36,10 @@ pubs = Interest.create(name: "Pubs", interest_category_id: category.id)
 restaurants = Interest.create(name: "Restaurants", interest_category_id: category.id)
 
 category = InterestCategory.create(name: "Food")
-# Interest.create(name: "Vegan", interest_category_id: category.id)
 Interest.create(name: "Meat lover", interest_category_id: category.id)
-# Interest.create(name: "Street food", interest_category_id: category.id)
 Interest.create(name: "Gluten free", interest_category_id: category.id)
-# Interest.create(name: "Vegetarian", interest_category_id: category.id)
 Interest.create(name: "Fast-food", interest_category_id: category.id)
 Interest.create(name: "Haut cuisine", interest_category_id: category.id)
-# Interest.create(name: "International", interest_category_id: category.id)
 
 vegan = Interest.create(name: "Vegan", interest_category_id: category.id)
 street_food = Interest.create(name: "Street food", interest_category_id: category.id)
@@ -70,23 +49,10 @@ international = Interest.create(name: "International", interest_category_id: cat
 Interest.create(name: "Wine lover", interest_category_id: category.id)
 
 category = InterestCategory.create(name: "Sports")
-# Interest.create(name: "Tennis", interest_category_id: category.id)
-# Interest.create(name: "Football", interest_category_id: category.id)
-# Interest.create(name: "Gym", interest_category_id: category.id)
-# Interest.create(name: "Basketball", interest_category_id: category.id)
-# Interest.create(name: "Climbing", interest_category_id: category.id)
-# Interest.create(name: "Baseball", interest_category_id: category.id)
 Interest.create(name: "Martial arts", interest_category_id: category.id)
 Interest.create(name: "Pole dancing", interest_category_id: category.id)
 Interest.create(name: "Archery", interest_category_id: category.id)
 Interest.create(name: "Sailing", interest_category_id: category.id)
-# Interest.create(name: "Hockey", interest_category_id: category.id)
-# Interest.create(name: "Badmington", interest_category_id: category.id)
-# Interest.create(name: "Running", interest_category_id: category.id)
-# Interest.create(name: "Crossfit", interest_category_id: category.id)
-# Interest.create(name: "Skating", interest_category_id: category.id)
-# Interest.create(name: "Table tennis", interest_category_id: category.id)
-# Interest.create(name: "Volleyball", interest_category_id: category.id)
 
 tennis = Interest.create(name: "Tennis", interest_category_id: category.id)
 football = Interest.create(name: "Football", interest_category_id: category.id)
@@ -101,65 +67,12 @@ crossfit = Interest.create(name: "Crossfit", interest_category_id: category.id)
 skating = Interest.create(name: "Skating", interest_category_id: category.id)
 table_tennis = Interest.create(name: "Table tennis", interest_category_id: category.id)
 volleyball = Interest.create(name: "Volleyball", interest_category_id: category.id)
-# Interest.create(name: "Yoga", interest_category_id: category.id)
-# Interest.create(name: "Rugby", interest_category_id: category.id)
-# Interest.create(name: "Tai chi", interest_category_id: category.id)
-# Interest.create(name: "Taekwondo", interest_category_id: category.id)
-# Interest.create(name: "Soccer", interest_category_id: category.id)
-# Interest.create(name: "Jumping rope", interest_category_id: category.id)
-
-
-# category = InterestCategory.create(name: "Outdoors and Outdoor Sports")
-# Interest.create(name: "Cycling", interest_category_id: category.id)
-# Interest.create(name: "Scuba diving", interest_category_id: category.id)
-# Interest.create(name: "Windsurfing", interest_category_id: category.id)
-# Interest.create(name: "Horse riding", interest_category_id: category.id)
-# Interest.create(name: "Surfing", interest_category_id: category.id)
-# Interest.create(name: "Skiing", interest_category_id: category.id)
-# Interest.create(name: "Snowboarding", interest_category_id: category.id)
-# Interest.create(name: "Hiking", interest_category_id: category.id)
-# Interest.create(name: "Mountainbike", interest_category_id: category.id)
-# Interest.create(name: "Camping", interest_category_id: category.id)
-# Interest.create(name: "Canoeing", interest_category_id: category.id)
-# Interest.create(name: "Fishing", interest_category_id: category.id)
-# Interest.create(name: "Dog walking", interest_category_id: category.id)
-# Interest.create(name: "Gardening", interest_category_id: category.id)
-# Interest.create(name: "Geocoaching", interest_category_id: category.id)
-# Interest.create(name: "Golf", interest_category_id: category.id)
-# Interest.create(name: "Kayaking", interest_category_id: category.id)
-# Interest.create(name: "Kitesurfing", interest_category_id: category.id)
-# Interest.create(name: "Motor sports", interest_category_id: category.id)
-# Interest.create(name: "Mountaineering", interest_category_id: category.id)
-# Interest.create(name: "Nordic skating", interest_category_id: category.id)
-# Interest.create(name: "Picnicking", interest_category_id: category.id)
-# Interest.create(name: "Rafting", interest_category_id: category.id)
-# Interest.create(name: "Rock Climbing", interest_category_id: category.id)
-# Interest.create(name: "Picnicking", interest_category_id: category.id)
-# Interest.create(name: "Polo", interest_category_id: category.id)
-# Interest.create(name: "Sailing", interest_category_id: category.id)
-# Interest.create(name: "Slacklining", interest_category_id: category.id)
-# Interest.create(name: "Snorkeling", interest_category_id: category.id)
-# Interest.create(name: "Snowshoeing", interest_category_id: category.id)
-# Interest.create(name: "Skydiving", interest_category_id: category.id)
-# Interest.create(name: "Taking walks", interest_category_id: category.id)
-# Interest.create(name: "Roller skating", interest_category_id: category.id)
-# Interest.create(name: "Paragliding", interest_category_id: category.id)
-
 
 category = InterestCategory.create(name: "Music")
-# Interest.create(name: "Classical", interest_category_id: category.id)
-# Interest.create(name: "Rock", interest_category_id: category.id)
-# Interest.create(name: "Alternative", interest_category_id: category.id)
-# Interest.create(name: "Electronic", interest_category_id: category.id)
-# Interest.create(name: "Jazz", interest_category_id: category.id)
-# Interest.create(name: "Punk", interest_category_id: category.id)
 Interest.create(name: "Country", interest_category_id: category.id)
 Interest.create(name: "K-pop", interest_category_id: category.id)
 Interest.create(name: "A Capella", interest_category_id: category.id)
-# Interest.create(name: "Pop", interest_category_id: category.id)
-# Interest.create(name: "Indie", interest_category_id: category.id)
 Interest.create(name: "Pop", interest_category_id: category.id)
-# Interest.create(name: "Techno", interest_category_id: category.id)
 
 classical = Interest.create(name: "Classical", interest_category_id: category.id)
 rock = Interest.create(name: "Rock", interest_category_id: category.id)
@@ -174,46 +87,6 @@ techno = Interest.create(name: "Techno", interest_category_id: category.id)
 
 puts "all interests"
 
-# category = InterestCategory.create(name: "Culture")
-# Interest.create(name: "Museums", interest_category_id: category.id)
-# Interest.create(name: "Painting", interest_category_id: category.id)
-# Interest.create(name: "Art", interest_category_id: category.id)
-# Interest.create(name: "Cinema", interest_category_id: category.id)
-# Interest.create(name: "Photography", interest_category_id: category.id)
-
-# category = InterestCategory.create(name: "Personality")
-# Interest.create(name: "Cheerful", interest_category_id: category.id)
-# Interest.create(name: "Adventurous", interest_category_id: category.id)
-# Interest.create(name: "Adrenaline junkie", interest_category_id: category.id)
-# Interest.create(name: "Spontaneous", interest_category_id: category.id)
-# Interest.create(name: "Chill", interest_category_id: category.id)
-# Interest.create(name: "Punk", interest_category_id: category.id)
-# Interest.create(name: "Country", interest_category_id: category.id)
-
-# category = InterestCategory.create(name: "Educational")
-# Interest.create(name: "Archaeology", interest_category_id: category.id)
-# Interest.create(name: "Astronomy", interest_category_id: category.id)
-# Interest.create(name: "Biology", interest_category_id: category.id)
-# Interest.create(name: "Chemistry", interest_category_id: category.id)
-# Interest.create(name: "English", interest_category_id: category.id)
-# Interest.create(name: "Geography", interest_category_id: category.id)
-# Interest.create(name: "History", interest_category_id: category.id)
-# Interest.create(name: "Mathematics", interest_category_id: category.id)
-# Interest.create(name: "Medical science", interest_category_id: category.id)
-# Interest.create(name: "Microbiology", interest_category_id: category.id)
-# Interest.create(name: "Philosophy", interest_category_id: category.id)
-# Interest.create(name: "Physics", interest_category_id: category.id)
-# Interest.create(name: "Psychology", interest_category_id: category.id)
-# Interest.create(name: "Research", interest_category_id: category.id)
-# Interest.create(name: "Science and technology", interest_category_id: category.id)
-# Interest.create(name: "Social studies", interest_category_id: category.id)
-# Interest.create(name: "Sports science", interest_category_id: category.id)
-# Interest.create(name: "Life science", interest_category_id: category.id)
-# Interest.create(name: "Physics", interest_category_id: category.id)
-# Interest.create(name: "Psychology", interest_category_id: category.id)
-# Interest.create(name: "Physics", interest_category_id: category.id)
-
-
 file = URI.open('https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')
 a = User.new(
   email: "a@test.com",
@@ -223,7 +96,6 @@ a = User.new(
   last_name: "Eriksson",
   birthdate: "1997-02-03",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English", "Swedish",],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -269,7 +141,6 @@ b = User.new(
   last_name: "Young",
   birthdate: "1992-06-06",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -298,7 +169,6 @@ c = User.new(
   last_name: "Jackson",
   birthdate: "1990-01-03",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["English", "Swedish", "Italian"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -326,7 +196,6 @@ d = User.new(
   last_name: "Dirla",
   birthdate: "1986-05-03",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -355,7 +224,6 @@ e = User.new(
   last_name: "Lee",
   birthdate: "1989-08-27",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -383,7 +251,6 @@ f = User.new(
   last_name: "Perreira",
   birthdate: "1997-04-03",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English", "Arabic"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
@@ -410,11 +277,11 @@ g = User.new(
   last_name: "Michaelsson",
   birthdate: "1990-09-28",
   location: "Barcelona",
-  # city: "Barcelona",
   country: "Spain",
   languages: ["Spanish", "English"],
   description: "Hi there! Happy that you found my profile. Message me if you want to meet up for a fun adventure or if you have any questions! :)"
   )
+
 g.photo.attach(io: file, filename: 'some_name', content_type: '')
 g.save!
 
@@ -429,56 +296,3 @@ UserInterest.create!(user_id: g.id, interest_id: crossfit.id)
 UserInterest.create!(user_id: g.id, interest_id: baseball.id)
 
 puts "all users created"
-
-# h = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest_id: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: coffee)
-# UserInterest.create!(user: d, interest: badminton)
-
-# i = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: coffee)
-# UserInterest.create!(user: d, interest: badminton)
-
-# j = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: coffee)
-# UserInterest.create!(user: d, interest: badminton)
-
-# k = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: coffee)
-# UserInterest.create!(user: d, interest: badminton)
-
-# l = User.create!(username: 'John', email: 'dmail@test.com', password: '123456', location: "Stockholm")
-# UserInterest.create!(user: d, interest: tennis)
-# UserInterest.create!(user: d, interest: volleyball)
-# UserInterest.create!(user: d, interest: coffee)
-# UserInterest.create!(user: d, interest: badminton)
-
-# t.string "email", default: "", null: false
-# t.string "first_name"
-# t.string "last_name"
-# t.string "username"
-# t.integer "age"
-# t.string "gender"
-# t.date "birthdate"
-# t.string "location"
-# t.text "languages", array: true
-# t.text "description"
-# t.string "cities_visited"
-# t.string "user_type"
-# t.string "profile_type"
-# t.string "name"
-# t.boolean "admin"
-
-
-
-
-
-
-
