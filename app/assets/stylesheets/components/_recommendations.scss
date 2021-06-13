@@ -85,3 +85,84 @@ textarea#recommendation_description {
 input#recommendation_photo {
   background-color: white;
 }
+
+/* recommendation cards */
+
+.recommendation-card {
+  height: fit-content;
+  margin: 20px 24px;
+  background-color: rgba(240, 240, 240, 0.4);
+  border-radius: 16px;
+  text-align: center;
+  padding-bottom: 8px;
+  box-shadow: 2px 2px 4px rgba(230, 230, 230, 0.5);
+  object-fit: cover;
+  position: relative;
+}
+
+.recommendation-container {
+  text-align: center;
+}
+
+.delete-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.recommendation-bookmark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.fa-times.reco {
+  font-size: 20px;
+  color: rgba(100, 100, 100, 0.8);
+
+  &:hover {
+    color: rgba(252, 140, 88, 1);
+  }
+}
+
+.fas.fa-bookmark {
+  font-size: 20px;
+  color: rgba(100, 100, 100, 0.4);
+
+  &:hover {
+    color: rgba(252, 140, 88, 1);
+  }
+}
+
+#recommendation-name {
+  margin: 8px 0px;
+  font-weight: bolder;
+}
+
+#recommendation-description {
+  font-size: 14px;
+  margin: 8px 8px;
+}
+
+.foto-recommendation {
+  height: 150px;
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+  margin-bottom: 8px;
+}
+
+.recommendation-pricing {
+  color: rgba(100, 100, 100, 0.8);
+  font-size: 14px;
+}
+
+/* media queries */
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+  .recommendation-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
