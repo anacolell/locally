@@ -10,9 +10,9 @@
 }
 
 .search {
-    width: 70% !important;
-    border-radius: 50px !important;
-    border-style: none !important;
+  width: 70% !important;
+  border-radius: 50px !important;
+  border-style: none !important;
 }
 
 #green-btn {
@@ -41,4 +41,16 @@
 
 .formatted-text {
   color: black;
+}
+
+@media (min-width: 768px) {
+  .search-wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-form {
+    width: 60%;
+  }
 }
