@@ -1,7 +1,7 @@
-<div class="show-card">
-  <h5 class="my-4 recommendation-container">
+<h5 class="my-4 recommendation-container">
     My bookmarks
   </h5>
+<div class="show-card recommendation-cards">
     <% unless @user.bookmarks.empty? %>
       <% @user.bookmarks.each do |bookmark| %>
         <% recommendation_id = bookmark.recommendation_id %>

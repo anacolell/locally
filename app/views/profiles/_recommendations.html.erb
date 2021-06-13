@@ -1,31 +1,31 @@
-<div class="show-card">
-  <h5 class="my-4 recommendation-container">
-    My recommendations
-  </h5>
-    <% unless @user.recommendations.empty? %>
-      <% @user.recommendations.each do |recommendation| %>
-        <div class="recommendation-card">
-          <div class="recommendation-photo">
-            <% if recommendation.photo.attached?  %>
-              <%= cl_image_tag recommendation.photo.key, crop: :fill, class:"foto-recommendation" %>
+<h5 class="my-4 recommendation-container">
+  My recommendations
+</h5>
+<div class="show-card recommendation-cards">
+  <% unless @user.recommendations.empty? %>
+    <% @user.recommendations.each do |recommendation| %>
+      <div class="recommendation-card">
+        <div class="recommendation-photo">
+          <% if recommendation.photo.attached?  %>
+            <%= cl_image_tag recommendation.photo.key, crop: :fill, class:"foto-recommendation" %>
+          <% end %>
+          <div class="delete-button">
+            <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-times reco"></i>
             <% end %>
-            <div class="delete-button">
-              <%= link_to recommendation_path(recommendation), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <i class="fas fa-times reco"></i>
-              <% end %>
-            </div>
-          </div>
-          <div id="recommendation-name"><%= recommendation.name %></div>
-          <div id="recommendation-description"><%= recommendation.description %></div>
-          <hr>
-          <div class="row justify-content-center">
-            <div class="col col-xs-6 recommendation-pricing">Pricing: <%= recommendation.pricing %></div>
           </div>
         </div>
-      <% end %>
-    <% else %>
-      <p>You haven't added any recommendations yet!<p>
+        <div id="recommendation-name"><%= recommendation.name %></div>
+        <div id="recommendation-description"><%= recommendation.description %></div>
+        <hr>
+        <div class="row justify-content-center">
+          <div class="col col-xs-6 recommendation-pricing">Pricing: <%= recommendation.pricing %></div>
+        </div>
+      </div>
     <% end %>
+  <% else %>
+    <p>You haven't added any recommendations yet!<p>
+  <% end %>
 </div>
 
 <div class="show-buttons">
