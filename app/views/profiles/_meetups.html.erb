@@ -2,43 +2,47 @@
   <h5 class="meetup-card-title">Upcoming meetups:</h5>
     <% if @user.meetups_as_tourist.any? || @user.meetups_as_local.any? %>
       <% @user.meetups_as_tourist.each do |meetup| %>
-        <div class="card-meetups">
-          <div class="card-meetup-text">
-            <p>Meetup with: <%= meetup.local.first_name %></p>
-            <p>Location: <%= meetup.location %></p>
-            <p>Date: <%= meetup.date_time %></p>
-          </div>
-          <% if meetup.local.photo.attached? %>
-            <%= link_to user_path(meetup.local) do %>
-              <%= cl_image_tag meetup.local.photo.key %>
+        <div class="cards-meetups">
+          <div class="card-meetups">
+            <div class="card-meetup-text">
+              <p>Meetup with: <%= meetup.local.first_name %></p>
+              <p>Location: <%= meetup.location %></p>
+              <p>Date: <%= meetup.date_time %></p>
+            </div>
+            <% if meetup.local.photo.attached? %>
+              <%= link_to user_path(meetup.local) do %>
+                <%= cl_image_tag meetup.local.photo.key %>
+              <% end %>
+            <% else %>
+              <%= image_tag('user.png') %>
             <% end %>
-          <% else %>
-            <%= image_tag('user.png') %>
-          <% end %>
-          <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
-            <i class="fas fa-times"></i>
-          <% end %>
+            <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+          </div>
         </div>
       <% end %>
-      <% @user.meetups_as_local.each do |meetup| %>
-        <div class="card-meetups">
-          <div class="card-meetup-text">
-            <p>Meetup with: <%= meetup.tourist.first_name %></p>
-            <p>Location: <%= meetup.location %></p>
-            <p>Date: <%= meetup.date_time %></p>
-          </div>
-          <% if meetup.tourist.photo.attached? %>
-            <%= link_to user_path(meetup.tourist) do %>
-              <%= cl_image_tag meetup.tourist.photo.key %>
-            <% end %>
-          <% else %>
-            <%= image_tag('user.png') %>
-          <% end %>
-          <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
-            <i class="fas fa-times"></i>
+        <div class="cards-meetups">
+          <% @user.meetups_as_local.each do |meetup| %>
+            <div class="card-meetups">
+              <div class="card-meetup-text">
+                <p>Meetup with: <%= meetup.tourist.first_name %></p>
+                <p>Location: <%= meetup.location %></p>
+                <p>Date: <%= meetup.date_time %></p>
+              </div>
+              <% if meetup.tourist.photo.attached? %>
+                <%= link_to user_path(meetup.tourist) do %>
+                  <%= cl_image_tag meetup.tourist.photo.key %>
+                <% end %>
+              <% else %>
+                <%= image_tag('user.png') %>
+              <% end %>
+              <%= link_to meetup_path(meetup), method: :delete, class: 'delete-btn-meetup' do %>
+                <i class="fas fa-times"></i>
+              <% end %>
+            </div>
           <% end %>
         </div>
-      <% end %>
     <% else %>
       <p class="mt-4 text-white">You don't have any meetups planned.</p>
     <% end %>

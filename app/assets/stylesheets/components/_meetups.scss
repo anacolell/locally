@@ -72,3 +72,19 @@
 .meetup-name {
   font-weight: bolder;
 }
+
+/* media queries */
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+  .cards-meetups {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-meetups {
+    width: 60%;
+  }
+}
