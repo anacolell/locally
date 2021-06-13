@@ -47,6 +47,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     authorize @user
+    @recommendations = Recommendation.where(user_id: @user.id)
+    @recommendation_markers = @recommendations.geocoded.map do |recommendation|
+      {
+        lat: recommendation.latitude,
+        long: recommendation.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { recommendation: recommendation })
+      }
+    end
   end
 
   private
