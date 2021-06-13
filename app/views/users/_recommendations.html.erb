@@ -1,27 +1,27 @@
-<div class="show-card">
-  <h5 class="my-4 recommendation-container">
-    My recommendations
-  </h5>
-    <% unless @user.recommendations.empty? %>
-      <% @user.recommendations.each do |recommendation| %>
-        <div class="recommendation-card">
-          <% if recommendation.photo.attached?  %>
-            <%= cl_image_tag recommendation.photo.key, crop: :fill, class:"foto-recommendation" %>
-          <% end %>
-          <div id="recommendation-name"><%= recommendation.name %></div>
-          <div id="recommendation-description"><%= recommendation.description %></div>
-          <hr>
-          <div class="row justify-content-center">
-            <div class="col col-xs-6 recommendation-pricing">Pricing: <%= recommendation.pricing %></div>
-            <div class="recommendation-bookmark">
-              <%= link_to recommendation_bookmarks_path(recommendation), method: :post do %>
-                <i class="fas fa-bookmark"></i>
-              <% end %>
-            </div>
+<h5 class="my-4 recommendation-container">
+  My recommendations
+</h5>
+<div class="show-card recommendation-cards">
+  <% unless @user.recommendations.empty? %>
+    <% @user.recommendations.each do |recommendation| %>
+      <div class="recommendation-card">
+        <% if recommendation.photo.attached?  %>
+          <%= cl_image_tag recommendation.photo.key, crop: :fill, class:"foto-recommendation" %>
+        <% end %>
+        <div id="recommendation-name"><%= recommendation.name %></div>
+        <div id="recommendation-description"><%= recommendation.description %></div>
+        <hr>
+        <div class="row justify-content-center">
+          <div class="col col-xs-6 recommendation-pricing">Pricing: <%= recommendation.pricing %></div>
+          <div class="recommendation-bookmark">
+            <%= link_to recommendation_bookmarks_path(recommendation), method: :post do %>
+              <i class="fas fa-bookmark"></i>
+            <% end %>
           </div>
         </div>
-      <% end %>
-    <% else %>
-      <p>They haven't added any recommendations yet!<p>
+      </div>
     <% end %>
+  <% else %>
+    <p>They haven't added any recommendations yet!<p>
+  <% end %>
 </div>
