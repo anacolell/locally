@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .wrapper {
-  height: 100vh;
+  height: 100%;
   background:$peach-gradient;
   color:white;
 }
@@ -71,3 +71,22 @@
 .logo-title {
   margin:0;
 }
+
+
+/* media queries */
+
+// Medium devices (tablets, 768px and up)
+
+@media (min-width: 768px) {
+  .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-wrapper {
+    width: 60%;
+    margin-bottom:100px;
+  }
+}
+

@@ -1,35 +1,37 @@
 <div class="search-wrapper">
-  <div class="mt-12 mb-4 pt-5">
-    <div align="center">
-      <h2 class="text">Where are you headed <b>next?</b></h2>
-    </div>
-  </div>
-  <div class=" pb-1">
-    <div align="center">
-      <p class="text">What's the destination?</p>
-    </div>
-  </div>
-  <div class="mb-2 pt-1 pb-2">
-    <div align="center">
-      <%= form_tag users_path, method: 'get' do %>
-      <div class="search">
-        <%= text_field_tag :query, '', id: 'search' %>
+  <div class="search-form">
+    <div class="mt-12 mb-4 pt-5">
+      <div align="center">
+        <h2 class="text">Where are you headed <b>next?</b></h2>
       </div>
-      <div class="fly-btn">
-        <div class="pt-5 pb-2">
-          <div align="center">
-            <%= submit_tag "Let's go!", :commit => "Let's go!", id: 'green-btn' %>
+    </div>
+    <div class=" pb-1">
+      <div align="center">
+        <p class="text">What's the destination?</p>
+      </div>
+    </div>
+    <div class="mb-2 pt-1 pb-2">
+      <div align="center">
+        <%= form_tag users_path, method: 'get' do %>
+        <div class="search">
+          <%= text_field_tag :query, '', id: 'search' %>
+        </div>
+        <div class="fly-btn">
+          <div class="pt-5 pb-2">
+            <div align="center">
+              <%= submit_tag "Let's go!", :commit => "Let's go!", id: 'green-btn' %>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="adv-btn">
-        <div class="mb-4 pt-2 pb-2">
-          <div align="center">
-            <%= submit_tag "I'm feeling adventurous!", :adventurous => "adventurous", id: 'btn-adv' %>
+        <div class="adv-btn">
+          <div class="mb-4 pt-2 pb-2">
+            <div align="center">
+              <%= submit_tag "I'm feeling adventurous!", :adventurous => "adventurous", id: 'btn-adv' %>
+            </div>
           </div>
         </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
 </div>
