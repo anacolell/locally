@@ -9,10 +9,12 @@
   </div>
   <div class="locals-wrapper">
     <% if @locals_location.nil? %>
-      <p class="my-3">You haven't added any interests yet. Please edit your profile so we can find you the best local matches!</p>
+    <div class="text-center mt-5">
+      <p class="my-4">You haven't added any interests yet. Please edit your profile so we can find you the best local matches!</p>
       <div class="btn-interest-search mt-4">
         <%= link_to "Add interests", new_user_interest_path, class:'profile-interest-btn' %>
       </div>
+    </div>
     <% else %>
       <% if params[:commit] == "Let's go!" %>
         <% local_array = @locals_location.sort_by { |local_sorted| -local_sorted.instance_variable_get("@ranking") } %>
