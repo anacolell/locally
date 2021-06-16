@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def index
     @users = policy_scope(User)
+    unless @matching_number.nil?
     if params[:commit] == "Let's go!"
       # flash[:notice] = "Good news, there are locals in the city that you are visiting! The percentages show you how well your interests match with the locals' interests. Happy exploring!"
       @locals_location = @locals.where("location ILIKE ?", "%#{params[:query].split(",").first}%")
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
       @matching_number = (calculate_similarity_ranking(@random_local) * 100).round(0)
       @random_local.instance_variable_set("@ranking", @matching_number)
     end
+  end
   end
 
 # method for calculating the number of similar interests between local and tourist
