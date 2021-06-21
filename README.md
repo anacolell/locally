@@ -4,7 +4,7 @@
 Locally is a mobile app that brings together travellers and locals based on their mutual interests. 
 
 ### Who is locally for? 
-For all those travellers who are looking for authentic and memorable experiences when visiting new places. If you are the kind of traveller who is interested in connecting with locals so they can get access to the best tips and recommendations, or even meet up with them, locally is for you! Don't fall anymore for any tourist traps, but feel like a local instead. 
+For all those travellers who are looking for authentic and memorable experiences when visiting new places. If you are the kind of traveller who is interested in connecting with locals so you can get access to the best tips and recommendations, or even meet up with them, locally is for you! Don't fall anymore for any tourist traps, but feel like a local instead. 
 
 ### How does it work?
 * Simply sign up and create a profile with basic information about yourself.
