@@ -23,6 +23,6 @@ For all those travellers who are looking for authentic and memorable experiences
 
 * After that, you can click on a local's profile and contact them through the chat function. If you decide to meet, you can create a meetup that will be saved to your profile. 
 
-![local_profile](https://user-images.githubusercontent.com/68306689/122747545-79c25c80-d28b-11eb-81c8-876b93baebc0.png | width=600) ![chat_background](https://user-images.githubusercontent.com/68306689/122747644-9bbbdf00-d28b-11eb-8ff3-b727bf1ead03.png | width=200)
+![local_profile](https://user-images.githubusercontent.com/68306689/122747545-79c25c80-d28b-11eb-81c8-876b93baebc0.png) ![chat_background](https://user-images.githubusercontent.com/68306689/122747644-9bbbdf00-d28b-11eb-8ff3-b727bf1ead03.png)
 
 
