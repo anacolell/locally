@@ -16,7 +16,7 @@ For all those travellers who are looking for authentic and memorable experiences
 * Search for locals in the city you're going to be visiting. 
  There are two options: 
   * **Let's go!** Will find locals ordered by the highest match to the lowest. 
-  * **I'm feeling adventurous!** If you feel like getting out of your comfort zone, I'm feeling lucky will match you to a completely random local. This is a great opportunity to meet people which you wouldn't meet otherwise. 
+  * **I'm feeling adventurous!** If you feel like getting out of your comfort zone, by choosing 'I'm feeling lucky' you'll be matched to a completely random local. This is a great opportunity to meet people which you wouldn't meet otherwise. 
 
 <img src="https://user-images.githubusercontent.com/68306689/122744745-9610ca00-d288-11eb-9813-eab17bd49263.png" height="500">
 
