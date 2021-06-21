@@ -10,7 +10,7 @@ For all those travellers who are looking for authentic and memorable experiences
 * Simply sign up and create a profile with basic information about yourself.
 * Add your interests, the more the better! This will help get you the best local matches. 
 
-![locally_1](https://user-images.githubusercontent.com/68306689/122742470-43361300-d286-11eb-94e1-5485ae3040cd.png)
+![locally_1](https://user-images.githubusercontent.com/68306689/122804361-215d8000-d2c8-11eb-844c-b6d566b9f975.png)
 
 
 * Search for locals in the city you're going to be visiting. 
