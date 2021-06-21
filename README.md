@@ -25,3 +25,4 @@ For all those travellers who are looking for authentic and memorable experiences
 
 ![local_profile](https://user-images.githubusercontent.com/68306689/122750844-51d4f800-d28f-11eb-89f9-79c39165df4a.png)
 ![chat_final](https://user-images.githubusercontent.com/68306689/122750865-58fc0600-d28f-11eb-9327-cc375de15779.png)
+<img src="https://user-images.githubusercontent.com/68306689/122750865-58fc0600-d28f-11eb-9327-cc375de15779.png" height="500">
