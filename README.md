@@ -16,12 +16,12 @@ For all those travellers who are looking for authentic and memorable experiences
 * Search for locals in the city you're going to be visiting. 
  There are two options: 
   * **Let's go!** Will find locals ordered by the highest match to the lowest. 
-  * **I'm feeling adventurous!** If you feel like getting out of your comfort zone, by choosing 'I'm feeling lucky' you'll be matched to a completely random local. This is a great opportunity to meet people which you wouldn't meet otherwise. 
-
-![find_local](https://user-images.githubusercontent.com/68306689/122803853-75b43000-d2c7-11eb-816e-2463606a64ca.png)
-
+  * **I'm feeling adventurous!** If you feel like getting out of your comfort zone, by choosing 'I'm feeling lucky' you'll be matched to a completely random local. This is a great opportunity to meet people who you wouldn't meet otherwise. 
+  
+![find_local](https://user-images.githubusercontent.com/68306689/122804168-d5aad680-d2c7-11eb-9390-df75237efb28.png)
 
 * After that, you can click on a local's profile and contact them through the chat function. If you decide to meet, you can create a meetup that will be saved to your profile. 
 
-![local_profile](https://user-images.githubusercontent.com/68306689/122803998-9f6d5700-d2c7-11eb-9898-5f475041fa13.png)
-<img src="https://user-images.githubusercontent.com/68306689/122750865-58fc0600-d28f-11eb-9327-cc375de15779.png">
+![local_profile](https://user-images.githubusercontent.com/68306689/122804216-e78c7980-d2c7-11eb-8337-3efb0e3b8f6e.png)
+![chat_final](https://user-images.githubusercontent.com/68306689/122804205-e3f8f280-d2c7-11eb-8458-a0faf6e3ebdb.png)
+
