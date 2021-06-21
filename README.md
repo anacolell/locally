@@ -1,4 +1,4 @@
-![Captura de pantalla 2021-06-21 a las 11 01 24](https://user-images.githubusercontent.com/68306689/122746061-edfc0080-d289-11eb-995f-68fd2aa09890.png)
+![Captura de pantalla 2021-06-21 a las 12 13 59](https://user-images.githubusercontent.com/68306689/122746337-33b8c900-d28a-11eb-8c0e-b3528866fc2b.png)
 
 ### What is locally?
 Locally is a mobile app that brings together travellers and locals based on their mutual interests. 
@@ -17,6 +17,7 @@ For all those travellers who are looking for authentic and memorable experiences
  There are two options: 
   * Let's go! Will find locals ordered by the highest match to the lowest. 
   * I'm feeling adventurous? If you feel like getting out of your comfort zone, I'm feeling lucky will match you to a completely random local. This is a great opportunity to meet people which you wouldn't meet otherwise. 
+ 
 ![find_local](https://user-images.githubusercontent.com/68306689/122744745-9610ca00-d288-11eb-9813-eab17bd49263.png)
 
 
