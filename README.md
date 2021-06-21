@@ -18,7 +18,7 @@ For all those travellers who are looking for authentic and memorable experiences
   * **Let's go!** Will find locals ordered by the highest match to the lowest. 
   * **I'm feeling adventurous!** If you feel like getting out of your comfort zone, by choosing 'I'm feeling lucky' you'll be matched to a completely random local. This is a great opportunity to meet people which you wouldn't meet otherwise. 
 
-<img src="https://user-images.githubusercontent.com/68306689/122744745-9610ca00-d288-11eb-9813-eab17bd49263.png">
+![find_local](https://user-images.githubusercontent.com/68306689/122803853-75b43000-d2c7-11eb-816e-2463606a64ca.png)
 
 
 * After that, you can click on a local's profile and contact them through the chat function. If you decide to meet, you can create a meetup that will be saved to your profile. 
