@@ -1,6 +1,6 @@
 ![Captura de pantalla 2021-06-21 a las 12 13 59](https://user-images.githubusercontent.com/68306689/122746337-33b8c900-d28a-11eb-8c0e-b3528866fc2b.png)
 
-This App was created by Ana Colell and collaborated by Britta Felzmann and Qendresa Shala as our final project during Le Wagon bootcamp. 
+#### This App was created by Ana Colell and collaborated by Britta Felzmann and Qendresa Shala as our final project during Le Wagon bootcamp. 
 
 * Built with RoR, PostresQL as a database and deployed on Heroku. 
 * For the frontend we used CSS, JS and Bootstrap. 
